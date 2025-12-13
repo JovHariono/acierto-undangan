@@ -14,6 +14,7 @@ export default function Home() {
     kehadiran: 0,
     tiket: null,
   });
+  const [submitButton, setSubmitButton] = useState(false);
 
   const handleSubmit = () => {
     const data = new FormData();
@@ -22,20 +23,39 @@ export default function Home() {
     data.append("kehadiran", String(form.kehadiran));
     if (form.tiket) data.append("tiket", form.tiket);
 
+    setSubmitButton(true);
+
     axios
       .post(`${process.env.NEXT_PUBLIC_BE_URL}/attendance`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       })
-      .then((res) => [console.log(res)])
+      .then((res) => {
+        console.log(res);
+      })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setSubmitButton(false);
+        setForm({
+          company: "",
+          name: "",
+          kehadiran: 0,
+          tiket: null,
+        });
       });
   };
 
   return (
     <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory bg-blue-900">
       {/* PAGE 1 */}
-      <div className="h-screen snap-start flex flex-col items-center justify-between py-5">
+      <div
+        className="h-screen snap-start 
+      flex flex-col items-center justify-between py-10
+      bg-[url('/bg/mobile.jpg')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat"
+      >
         <Header />
         <div>
           <Image
@@ -43,35 +63,39 @@ export default function Home() {
             width={200}
             height={300}
             src="/logo/astraNSM.png"
-            className="w-80 h-auto"
+            className="w-70 h-auto"
           />
         </div>
         <div
-          className="flex flex-col text-center gap-12"
-          style={{ color: "#ceb086" }}
+          className="flex flex-col text-xl text-center gap-12"
+          style={{ color: "#D8B55A" }}
         >
-          <div>
+          <div className="font-bold">
             <div>BATAM - GRAND MERCURE</div>
             <div>12 - 14 Januari 2026</div>
           </div>
 
-          <div>
+          <div className="font-bold">
             <div>01 HARI ; 37 JAM ; 20 MENIT</div>
             <div>MENUJU SNM 2026</div>
           </div>
         </div>
       </div>
 
-      <div className="h-screen flex flex-col justify-between">
+      <div
+        className="h-screen flex flex-col justify-between bg-[url('/bg/mobile.jpg')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat"
+      >
         <div className="snap-start flex flex-col items-center py-5">
           <Header />
           <div
             className="flex flex-col text-center items-center gap-1"
-            style={{ color: "#ceb086" }}
+            style={{ color: "#D8B55A" }}
           >
-            <h1 className="text-2xl text-center pt-7">INVITATION</h1>
+            <h1 className="text-3xl text-center pt-7 font-bold">INVITATION</h1>
 
-            <div className="space-y-4 w-[60%] p-10">
+            <div className="space-y-4 w-[90%] p-10 text">
               <p className="text-left">
                 Kami ingin mengundang keluarga besar Trading Domestic PT Astra
                 Otoparts Tbk. untuk ikut hadir di acara Nasional Sales Meeting
@@ -91,11 +115,15 @@ export default function Home() {
           width={200}
           height={300}
           src="/logo/astraNSM.png"
-          className="w-60 h-auto ml-10 mb-10"
+          className="w-40 h-auto ml-10 mb-15"
         />
       </div>
 
-      <div className="h-screen flex flex-col justify-between">
+      <div
+        className="h-screen flex flex-col justify-between bg-[url('/bg/mobile.jpg')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat"
+      >
         <div className="snap-start flex flex-col items-center py-5">
           <Header />
 
@@ -104,50 +132,48 @@ export default function Home() {
             width={200}
             height={300}
             src="/logo/footer/logoGrowAll.png"
-            className="w-80 h-auto object-contain"
+            className="w-60 h-auto object-contain"
           />
 
           <div
             className="flex flex-col items-start gap-1 w-full px-10"
-            style={{ color: "#ceb086" }}
+            style={{ color: "#D8B55A" }}
           >
-            <div className="flex flex-col w-full">
-              <h1 className="pt-3">This is our moment to</h1>
+            <div className="flex flex-col w-[90%]">
+              <h1 className="pt-3 text-sm">This is our moment to</h1>
 
-              <div className="flex flex-wrap text-xl">
-                <p>
-                  grow—expanding our reach, strengthening our market presence,
-                </p>
-                <p className="">and</p>
-              </div>
+              <p className="font-bold">
+                grow—expanding our reach, strengthening our market presence,{" "}
+                <span className="font-normal">and</span>
+              </p>
 
-              <p className="text-xl">building sustainable success</p>
-              <p>together as partners driving real change.</p>
+              <p className="font-bold">building sustainable success</p>
+              <p className="text-sm">together as partners driving real change.</p>
             </div>
           </div>
 
           <div
-            className="flex flex-col text-center items-center gap-1 pt-4"
-            style={{ color: "#ceb086" }}
+            className="flex flex-col text-center items-center pt-4"
+            style={{ color: "#D8B55A" }}
           >
-            <div className="flex gap-2 space-y-4 px-10 pt-4">
+            <div className="flex gap-8 px-10 pt-4">
               <Image
                 alt=""
                 width={200}
                 height={300}
                 src="/img/1.jpg"
-                className="w-60 h-auto"
+                className="w-20 h-auto object-contain"
               />
 
-              <div className="text-left">
-                <p>OPPORTUNITY IDENTIFICATION</p>
+              <div className="text-left text-[10px]">
+                <p className="font-bold">OPPORTUNITY IDENTIFICATION</p>
                 <p>
                   Tahap menemukan dan memahami peluang yang ada di lapangan
                   sebelum menganalisa peluang untuk mengetahui akar masalah &
                   kebutuhan untuk langkah selanjutnya.
                 </p>
-                <div className="text-right">
-                  <p>
+                <div className="text-right text-white">
+                  <p className="pl-6">
                     The first stage is to identify and understand the
                     opportunities available in the field before Analyzing those
                     opportunities in detail to uncover root causes &
@@ -156,23 +182,23 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-2 space-y-4 w px-10 pt-4">
+            <div className="flex gap-8 px-10 pt-6">
               <Image
                 alt=""
                 width={200}
                 height={300}
                 src="/img/1.jpg"
-                className="w-60 h-auto"
+                className="w-20 h-auto object-contain"
               />
 
-              <div className="text-left">
-                <p>YIELD ACTIVATION</p>
+              <div className="text-left text-[10px]">
+                <p className="font-bold">YIELD ACTIVATION</p>
                 <p>
                   Membuat target yang ingin dicapai dari peluang yang telah di
                   analisa dan melakukan eksekusi dalam bentuk tindakan nyata dan
                   baru sehingga outcome menjadi jelas dan terukur.
                 </p>
-                <div className="text-right">
+                <div className="text-right text-white pl-6">
                   <p>
                     Setting achievable targets from analyzed opportunities and
                     executing them through extraordinary actions, ensuring
@@ -186,11 +212,16 @@ export default function Home() {
       </div>
 
       {/* MERCURE */}
-      <div className="h-full snap-start justify-between flex flex-col items-center py-5">
+      <div
+        className="h-full snap-start justify-between flex flex-col items-center py-5
+      bg-[url('/bg/mobile.jpg')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat font-bold"
+      >
         <Header />
         <div
           className="flex flex-col text-center items-center"
-          style={{ color: "#ceb086" }}
+          style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
             <h1 className="text-2xl text-center">NATIONAL SALES</h1>
@@ -232,18 +263,23 @@ export default function Home() {
               className="w-5 h-auto"
             />
 
-            <div className="w-60 p-2 rounded bg-[#ceb086]"></div>
+            <div className="w-60 p-2 rounded bg-[#D8B55A]"></div>
           </div>
         </div>
         <Footer />
       </div>
 
       {/* Tembak Langit */}
-      <div className="h-full snap-start justify-between flex flex-col items-center py-5">
+      <div
+        className="h-full snap-start justify-between flex flex-col items-center py-5
+      bg-[url('/bg/mobile.jpg')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat font-bold"
+      >
         <Header />
         <div
           className="flex flex-col text-center items-center"
-          style={{ color: "#ceb086" }}
+          style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
             <h1 className="text-2xl text-center">NATIONAL SALES</h1>
@@ -279,18 +315,23 @@ export default function Home() {
               className="w-5 h-auto"
             />
 
-            <div className="w-60 p-2 rounded bg-[#ceb086]"></div>
+            <div className="w-60 p-2 rounded bg-[#D8B55A]"></div>
           </div>
         </div>
         <Footer />
       </div>
 
       {/* Batamia Oleh-Oleh */}
-      <div className="h-full snap-start justify-between flex flex-col items-center py-5">
+      <div
+        className="h-full snap-start font-bold justify-between flex flex-col items-center py-5
+      bg-[url('/bg/mobile.jpg')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat"
+      >
         <Header />
         <div
           className="flex flex-col text-center items-center"
-          style={{ color: "#ceb086" }}
+          style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
             <h1 className="text-2xl text-center">NATIONAL SALES</h1>
@@ -324,18 +365,23 @@ export default function Home() {
               className="w-5 h-auto"
             />
 
-            <div className="w-60 p-2 rounded bg-[#ceb086]"></div>
+            <div className="w-60 p-2 rounded bg-[#D8B55A]"></div>
           </div>
         </div>
         <Footer />
       </div>
 
       {/* Kelong Baba */}
-      <div className="h-full snap-start justify-between flex flex-col items-center py-5">
+      <div
+        className="h-full snap-start justify-between flex flex-col items-center py-5
+      bg-[url('/bg/mobile.jpg')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat font-bold"
+      >
         <Header />
         <div
           className="flex flex-col text-center items-center"
-          style={{ color: "#ceb086" }}
+          style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
             <h1 className="text-2xl text-center">NATIONAL SALES</h1>
@@ -372,17 +418,22 @@ export default function Home() {
               className="w-5 h-auto"
             />
 
-            <div className="w-60 p-2 rounded bg-[#ceb086]"></div>
+            <div className="w-60 p-2 rounded bg-[#D8B55A]"></div>
           </div>
         </div>
         <Footer />
       </div>
 
       {/* PAGE LAST */}
-      <div className="h-screen snap-start justify-between relative flex flex-col items-center py-5">
+      <div
+        className="h-screen snap-start justify-between relative flex flex-col items-center py-5
+      bg-[url('/bg/mobile.jpg')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat"
+      >
         <Header />
 
-        <div className="text-center" style={{ color: "#ceb086" }}>
+        <div className="text-3xl text-center font" style={{ color: "#D8B55A" }}>
           <div>RSVP</div>
           <div>CONFIRMATION</div>
         </div>
@@ -391,19 +442,19 @@ export default function Home() {
           <input
             type="text"
             placeholder="Company"
-            className="bg-[#ceb086] text-black placeholder-black/60 p-2 rounded focus:outline-none"
+            className="bg-[#D8B55A] text-black placeholder-black/60 p-2 rounded focus:outline-none"
             onChange={(e) => setForm({ ...form, company: e.target.value })}
           />
 
           <input
             type="text"
             placeholder="Nama"
-            className="bg-[#ceb086] text-black placeholder-black/60 p-2 rounded focus:outline-none"
+            className="bg-[#D8B55A] text-black placeholder-black/60 p-2 rounded focus:outline-none"
             onChange={(e) => setForm({ ...form, name: e.target.value })}
           />
 
           <select
-            className="bg-[#ceb086] text-black placeholder-black/60 p-2 rounded focus:outline-none"
+            className="bg-[#D8B55A] text-black placeholder-black/60 p-2 rounded focus:outline-none"
             onChange={(e) =>
               setForm({ ...form, kehadiran: Number(e.target.value) })
             }
@@ -413,7 +464,7 @@ export default function Home() {
             <option value="0">Tidak Hadir</option>
           </select>
 
-          <label className="flex flex-col border rounded p-3 cursor-pointer bg-[#ceb086]">
+          <label className="flex flex-col border rounded p-3 cursor-pointer bg-[#D8B55A]">
             <span className="text-sm mb-1">Tiket</span>
             <input
               type="file"
@@ -427,9 +478,15 @@ export default function Home() {
             </div>
           </label>
 
-          <button className="bg-amber-300 p-2 rounded" onClick={handleSubmit}>
-            Submit
-          </button>
+          {submitButton ? (
+            <button className="bg-amber-300 p-2 rounded" onClick={handleSubmit}>
+              Submiting...
+            </button>
+          ) : (
+            <button className="bg-amber-300 p-2 rounded" onClick={handleSubmit}>
+              Submit
+            </button>
+          )}
         </div>
         <Footer />
       </div>
