@@ -5,6 +5,7 @@ import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import axios from "axios";
 import { FormDataAttendanceType } from "./_type/FormDataAttendanceType";
+import Image from "next/image";
 
 export default function Home() {
   const [form, setForm] = useState<FormDataAttendanceType>({
@@ -20,7 +21,7 @@ export default function Home() {
     data.append("name", form.name);
     data.append("kehadiran", String(form.kehadiran));
     if (form.tiket) data.append("tiket", form.tiket);
-    
+
     axios
       .post(`${process.env.NEXT_PUBLIC_BE_URL}/attendance`, data, {
         headers: { "Content-Type": "multipart/form-data" },
@@ -32,47 +33,377 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory bg-blue-900">
       {/* PAGE 1 */}
-      <div className="h-screen snap-start flex flex-col items-center justify-between py-10">
+      <div className="h-screen snap-start flex flex-col items-center justify-between py-5">
         <Header />
-
-        <div className="text-center">
-          <div>BATAM - GRAND MERCURE</div>
-          <div>12 - 14 Januari 2026</div>
-          <div>01 HARI ; 37 JAM ; 20 MENIT</div>
-          <div>MENUJU SNM 2026</div>
+        <div>
+          <Image
+            alt=""
+            width={200}
+            height={300}
+            src="/logo/astraNSM.png"
+            className="w-80 h-auto"
+          />
         </div>
+        <div
+          className="flex flex-col text-center gap-12"
+          style={{ color: "#ceb086" }}
+        >
+          <div>
+            <div>BATAM - GRAND MERCURE</div>
+            <div>12 - 14 Januari 2026</div>
+          </div>
 
+          <div>
+            <div>01 HARI ; 37 JAM ; 20 MENIT</div>
+            <div>MENUJU SNM 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="h-screen flex flex-col justify-between">
+        <div className="snap-start flex flex-col items-center py-5">
+          <Header />
+          <div
+            className="flex flex-col text-center items-center gap-1"
+            style={{ color: "#ceb086" }}
+          >
+            <h1 className="text-2xl text-center pt-7">INVITATION</h1>
+
+            <div className="space-y-4 w-[60%] p-10">
+              <p className="text-left">
+                Kami ingin mengundang keluarga besar Trading Domestic PT Astra
+                Otoparts Tbk. untuk ikut hadir di acara Nasional Sales Meeting
+                2026, guna membahas dan merencanakan tahun yang akan datang.
+              </p>
+
+              <p className="text-right text-white">
+                We would like to invite the big family of Trading Domestic of PT
+                Astra Otoparts Tbk to attend the National Sales Meeting 2026, to
+                discuss and plan for this year.
+              </p>
+            </div>
+          </div>
+        </div>
+        <Image
+          alt=""
+          width={200}
+          height={300}
+          src="/logo/astraNSM.png"
+          className="w-60 h-auto ml-10 mb-10"
+        />
+      </div>
+
+      <div className="h-screen flex flex-col justify-between">
+        <div className="snap-start flex flex-col items-center py-5">
+          <Header />
+
+          <Image
+            alt=""
+            width={200}
+            height={300}
+            src="/logo/footer/logoGrowAll.png"
+            className="w-80 h-auto object-contain"
+          />
+
+          <div
+            className="flex flex-col items-start gap-1 w-full px-10"
+            style={{ color: "#ceb086" }}
+          >
+            <div className="flex flex-col w-full">
+              <h1 className="pt-3">This is our moment to</h1>
+
+              <div className="flex flex-wrap text-xl">
+                <p>
+                  grow—expanding our reach, strengthening our market presence,
+                </p>
+                <p className="">and</p>
+              </div>
+
+              <p className="text-xl">building sustainable success</p>
+              <p>together as partners driving real change.</p>
+            </div>
+          </div>
+
+          <div
+            className="flex flex-col text-center items-center gap-1 pt-4"
+            style={{ color: "#ceb086" }}
+          >
+            <div className="flex gap-2 space-y-4 px-10 pt-4">
+              <Image
+                alt=""
+                width={200}
+                height={300}
+                src="/img/1.jpg"
+                className="w-60 h-auto"
+              />
+
+              <div className="text-left">
+                <p>OPPORTUNITY IDENTIFICATION</p>
+                <p>
+                  Tahap menemukan dan memahami peluang yang ada di lapangan
+                  sebelum menganalisa peluang untuk mengetahui akar masalah &
+                  kebutuhan untuk langkah selanjutnya.
+                </p>
+                <div className="text-right">
+                  <p>
+                    The first stage is to identify and understand the
+                    opportunities available in the field before Analyzing those
+                    opportunities in detail to uncover root causes &
+                    requirements before deciding the next steps.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-2 space-y-4 w px-10 pt-4">
+              <Image
+                alt=""
+                width={200}
+                height={300}
+                src="/img/1.jpg"
+                className="w-60 h-auto"
+              />
+
+              <div className="text-left">
+                <p>YIELD ACTIVATION</p>
+                <p>
+                  Membuat target yang ingin dicapai dari peluang yang telah di
+                  analisa dan melakukan eksekusi dalam bentuk tindakan nyata dan
+                  baru sehingga outcome menjadi jelas dan terukur.
+                </p>
+                <div className="text-right">
+                  <p>
+                    Setting achievable targets from analyzed opportunities and
+                    executing them through extraordinary actions, ensuring
+                    outcomes that are clear and measurable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* MERCURE */}
+      <div className="h-full snap-start justify-between flex flex-col items-center py-5">
+        <Header />
+        <div
+          className="flex flex-col text-center items-center"
+          style={{ color: "#ceb086" }}
+        >
+          <div className="pt-4">
+            <h1 className="text-2xl text-center">NATIONAL SALES</h1>
+            <h1 className="text-2xl text-center pt-2">MEETING</h1>
+          </div>
+
+          <div className="w-[60%] pt-2">
+            <h1 className="text-xl text-center pt-2">AGENDA</h1>
+
+            <div>
+              <p>MEETING DAY</p>
+              <p className="">13 . 01 . 26 & 14 . 01 . 26</p>
+              <p className="">at. GRAND MERCURE</p>
+              <p className="">Dresscode Day 1 : </p>
+              <p className="">Kemeja Putih - Jeans</p>
+            </div>
+
+            <div className="pt-6">
+              <p className="">Dresscode Day 2 : </p>
+              <p className="">Kemeja Hitam - Jeans</p>
+              <p className="">09:00 - 17:00</p>
+            </div>
+          </div>
+
+          <Image
+            alt=""
+            width={200}
+            height={300}
+            src="/img/1.jpg"
+            className="w-40 h-auto pt-2"
+          />
+
+          <div className="flex p-4 pt-6 gap-4">
+            <Image
+              alt=""
+              width={200}
+              height={300}
+              src="/logo/gmap.png"
+              className="w-5 h-auto"
+            />
+
+            <div className="w-60 p-2 rounded bg-[#ceb086]"></div>
+          </div>
+        </div>
         <Footer />
       </div>
 
-      {/* PAGE 2 */}
-      <div className="h-screen snap-start flex flex-col items-center justify-between py-10">
+      {/* Tembak Langit */}
+      <div className="h-full snap-start justify-between flex flex-col items-center py-5">
+        <Header />
+        <div
+          className="flex flex-col text-center items-center"
+          style={{ color: "#ceb086" }}
+        >
+          <div className="pt-4">
+            <h1 className="text-2xl text-center">NATIONAL SALES</h1>
+            <h1 className="text-2xl text-center pt-2">MEETING</h1>
+          </div>
+
+          <div className="w-[60%] pt-2">
+            <h1 className="text-xl text-center pt-2">AGENDA</h1>
+
+            <div>
+              <p>AWARDING NIGHT 14 . 01 . 26</p>
+              <p className="">at. Tembak Langit</p>
+              <p className="">Dresscode : </p>
+              <p className="">......</p>
+              <p className="">17:00 - 21:00</p>
+            </div>
+          </div>
+
+          <Image
+            alt=""
+            width={200}
+            height={300}
+            src="/img/1.jpg"
+            className="w-40 h-auto pt-2"
+          />
+
+          <div className="flex p-4 gap-4">
+            <Image
+              alt=""
+              width={200}
+              height={300}
+              src="/logo/gmap.png"
+              className="w-5 h-auto"
+            />
+
+            <div className="w-60 p-2 rounded bg-[#ceb086]"></div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+
+      {/* Batamia Oleh-Oleh */}
+      <div className="h-full snap-start justify-between flex flex-col items-center py-5">
+        <Header />
+        <div
+          className="flex flex-col text-center items-center"
+          style={{ color: "#ceb086" }}
+        >
+          <div className="pt-4">
+            <h1 className="text-2xl text-center">NATIONAL SALES</h1>
+            <h1 className="text-2xl text-center pt-2">MEETING</h1>
+          </div>
+
+          <div className="w-[60%] pt-2">
+            <h1 className="text-xl text-center pt-2">AGENDA</h1>
+
+            <div>
+              <p>Belanja Oleh-Oleh</p>
+              <p className="">13 . 01 . 26 & 14 . 01 . 26</p>
+              <p className="">at. Batamia Oleh-Oleh</p>
+            </div>
+          </div>
+
+          <Image
+            alt=""
+            width={200}
+            height={300}
+            src="/img/1.jpg"
+            className="w-40 h-auto pt-2"
+          />
+
+          <div className="flex p-4 gap-4">
+            <Image
+              alt=""
+              width={200}
+              height={300}
+              src="/logo/gmap.png"
+              className="w-5 h-auto"
+            />
+
+            <div className="w-60 p-2 rounded bg-[#ceb086]"></div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+
+      {/* Kelong Baba */}
+      <div className="h-full snap-start justify-between flex flex-col items-center py-5">
+        <Header />
+        <div
+          className="flex flex-col text-center items-center"
+          style={{ color: "#ceb086" }}
+        >
+          <div className="pt-4">
+            <h1 className="text-2xl text-center">NATIONAL SALES</h1>
+            <h1 className="text-2xl text-center pt-2">MEETING</h1>
+          </div>
+
+          <div className="w-[60%] pt-2">
+            <h1 className="text-xl text-center pt-2">AGENDA</h1>
+
+            <div>
+              <p>CLOSING DINNER</p>
+              <p className="">14 . 01 . 26</p>
+              <p className="">at. KELONG BABA SEAFOOD</p>
+              <p className="">Dresscode : </p>
+              <p className="">......</p>
+              <p className="">18:00 - 21:00</p>
+            </div>
+          </div>
+
+          <Image
+            alt=""
+            width={200}
+            height={300}
+            src="/img/1.jpg"
+            className="w-40 h-auto pt-2"
+          />
+
+          <div className="flex p-4 gap-4">
+            <Image
+              alt=""
+              width={200}
+              height={300}
+              src="/logo/gmap.png"
+              className="w-5 h-auto"
+            />
+
+            <div className="w-60 p-2 rounded bg-[#ceb086]"></div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+
+      {/* PAGE LAST */}
+      <div className="h-screen snap-start justify-between relative flex flex-col items-center py-5">
         <Header />
 
-        <div className="text-center">
-          <div>Logo</div>
-          <div>RSVP CONFIRMATION</div>
+        <div className="text-center" style={{ color: "#ceb086" }}>
+          <div>RSVP</div>
+          <div>CONFIRMATION</div>
         </div>
 
         <div className="flex flex-col gap-4 w-64">
           <input
             type="text"
             placeholder="Company"
-            className="border p-2 rounded"
+            className="bg-[#ceb086] text-black placeholder-black/60 p-2 rounded focus:outline-none"
             onChange={(e) => setForm({ ...form, company: e.target.value })}
           />
 
           <input
             type="text"
             placeholder="Nama"
-            className="border p-2 rounded"
+            className="bg-[#ceb086] text-black placeholder-black/60 p-2 rounded focus:outline-none"
             onChange={(e) => setForm({ ...form, name: e.target.value })}
           />
 
           <select
-            className="border p-2 rounded"
+            className="bg-[#ceb086] text-black placeholder-black/60 p-2 rounded focus:outline-none"
             onChange={(e) =>
               setForm({ ...form, kehadiran: Number(e.target.value) })
             }
@@ -82,7 +413,7 @@ export default function Home() {
             <option value="0">Tidak Hadir</option>
           </select>
 
-          <label className="flex flex-col border rounded p-3 cursor-pointer">
+          <label className="flex flex-col border rounded p-3 cursor-pointer bg-[#ceb086]">
             <span className="text-sm mb-1">Tiket</span>
             <input
               type="file"
@@ -99,9 +430,8 @@ export default function Home() {
           <button className="bg-amber-300 p-2 rounded" onClick={handleSubmit}>
             Submit
           </button>
-
-          <Footer />
         </div>
+        <Footer />
       </div>
     </div>
   );
