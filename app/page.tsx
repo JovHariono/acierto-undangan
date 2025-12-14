@@ -168,7 +168,7 @@ export default function Home() {
               </p>
 
               <p className="font-bold text-sm">building sustainable success</p>
-              <p className="text-sm text-xs">
+              <p className="text-xs">
                 together as partners driving real change.
               </p>
             </div>
@@ -183,7 +183,7 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={300}
-                src="/logo/oi.png"
+                src="/img/img.png"
                 className="w-20 h-auto object-contain scale-200"
               />
 
@@ -209,7 +209,7 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={300}
-                src="/logo/va.png"
+                src="/img/img.png"
                 className="w-20 h-auto object-contain scale-200"
               />
 
