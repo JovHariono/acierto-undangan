@@ -6,6 +6,7 @@ import { AttendanceType } from "../_type/AttendanceType";
 
 const Admin = () => {
   const [rows, setRows] = useState<AttendanceType[]>([]);
+  const [isDownload, setIsDownload] = useState(false);
 
   useEffect(() => {
     axios
@@ -21,12 +22,11 @@ const Admin = () => {
 
   const handleDownload = async (id: Number) => {
     try {
+      setIsDownload(true);
       const res = await axios.get(
         `${process.env.NEXT_PUBLIC_BE_URL}/attendance/${id}/tiket`,
         { responseType: "blob" }
       );
-
-      console.log(res.headers)
 
       const fileName = res.headers["x-filename"] || "download";
       const contentType =
@@ -40,6 +40,7 @@ const Admin = () => {
       a.download = fileName;
       a.click();
       URL.revokeObjectURL(url);
+      setIsDownload(false)
     } catch (err) {
       console.error(err);
     }
@@ -70,14 +71,22 @@ const Admin = () => {
                 {r.tiket ? r.tiket.split("/").pop() : "-"}
               </td>
               <td className="border p-2 text-center">
-                {r.tiket && (
-                  <button
-                    className="px-3 py-1 border rounded"
-                    onClick={() => handleDownload(r.id)}
-                  >
-                    Download
-                  </button>
-                )}
+                {r.tiket &&
+                  (isDownload ? (
+                    <button
+                      className="px-3 py-1 border rounded opacity-50 cursor-not-allowed"
+                      disabled
+                    >
+                      Downloading...
+                    </button>
+                  ) : (
+                    <button 
+                      className="px-3 py-1 border rounded"
+                      onClick={() => handleDownload(r.id)}
+                    >
+                      Download
+                    </button>
+                  ))}
               </td>
             </tr>
           ))}

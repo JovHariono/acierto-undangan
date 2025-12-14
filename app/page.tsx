@@ -14,16 +14,36 @@ export default function Home() {
     kehadiran: 0,
     tiket: null,
   });
-  const [submitButton, setSubmitButton] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof FormDataAttendanceType, string>>
+  >({});
+  const validateForm = () => {
+    const newErrors: typeof errors = {};
+
+    if (!form.company.trim()) newErrors.company = "Company must be filled";
+    if (!form.name.trim()) newErrors.name = "Name must be filled";
+    if (form.kehadiran === null)
+      newErrors.kehadiran = "Attendance must be selected";
+    if (!form.tiket) newErrors.tiket = "Ticket must be uploaded";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = () => {
+    setIsSubmit(true);
+    if (!validateForm()) {
+      setIsSubmit(false);
+      return;
+    }
+
     const data = new FormData();
     data.append("company", form.company);
     data.append("name", form.name);
     data.append("kehadiran", String(form.kehadiran));
     if (form.tiket) data.append("tiket", form.tiket);
-
-    setSubmitButton(true);
 
     axios
       .post(`${process.env.NEXT_PUBLIC_BE_URL}/attendance`, data, {
@@ -36,7 +56,7 @@ export default function Home() {
         console.log(err);
       })
       .finally(() => {
-        setSubmitButton(false);
+        setIsSubmit(false);
         setForm({
           company: "",
           name: "",
@@ -47,7 +67,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory bg-blue-900">
+    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory bg-[#001A3F]">
       {/* PAGE 1 */}
       <div
         className="h-screen snap-start 
@@ -140,15 +160,17 @@ export default function Home() {
             style={{ color: "#D8B55A" }}
           >
             <div className="flex flex-col w-[90%]">
-              <h1 className="pt-3 text-sm">This is our moment to</h1>
+              <h1 className="pt-3 text-xs">This is our moment to</h1>
 
-              <p className="font-bold">
+              <p className="font-bold text-sm">
                 grow—expanding our reach, strengthening our market presence,{" "}
-                <span className="font-normal">and</span>
+                <span className="font-normal text-xs">and</span>
               </p>
 
-              <p className="font-bold">building sustainable success</p>
-              <p className="text-sm">together as partners driving real change.</p>
+              <p className="font-bold text-sm">building sustainable success</p>
+              <p className="text-sm text-xs">
+                together as partners driving real change.
+              </p>
             </div>
           </div>
 
@@ -161,7 +183,7 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={300}
-                src="/img/1.jpg"
+                src="/img/img.png"
                 className="w-20 h-auto object-contain"
               />
 
@@ -182,12 +204,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-8 px-10 pt-6">
+            <div className="flex gap-8 px-10 pt-4">
               <Image
                 alt=""
                 width={200}
                 height={300}
-                src="/img/1.jpg"
+                src="/img/img.png"
                 className="w-20 h-auto object-contain"
               />
 
@@ -223,26 +245,26 @@ export default function Home() {
           className="flex flex-col text-center items-center"
           style={{ color: "#D8B55A" }}
         >
-          <div className="pt-4">
-            <h1 className="text-2xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-2xl text-center pt-2">MEETING</h1>
+          <div className="">
+            <h1 className="text-xl text-center">NATIONAL SALES</h1>
+            <h1 className="text-xl text-center pt-2">MEETING</h1>
           </div>
 
           <div className="w-[60%] pt-2">
-            <h1 className="text-xl text-center pt-2">AGENDA</h1>
+            <h1 className="text-center pt-2">AGENDA</h1>
 
             <div>
-              <p>MEETING DAY</p>
-              <p className="">13 . 01 . 26 & 14 . 01 . 26</p>
-              <p className="">at. GRAND MERCURE</p>
-              <p className="">Dresscode Day 1 : </p>
-              <p className="">Kemeja Putih - Jeans</p>
+              <p className="text-sm">MEETING DAY</p>
+              <p className="text-sm">13 . 01 . 26 & 14 . 01 . 26</p>
+              <p className="text-sm">at. GRAND MERCURE</p>
+              <p className="text-sm">Dresscode Day 1 : </p>
+              <p className="text-sm">Kemeja Putih - Jeans</p>
             </div>
 
-            <div className="pt-6">
-              <p className="">Dresscode Day 2 : </p>
-              <p className="">Kemeja Hitam - Jeans</p>
-              <p className="">09:00 - 17:00</p>
+            <div className="pt-4">
+              <p className="text-sm">Dresscode Day 2 : </p>
+              <p className="text-sm">Kemeja Hitam - Jeans</p>
+              <p className="text-sm">09:00 - 17:00</p>
             </div>
           </div>
 
@@ -250,7 +272,7 @@ export default function Home() {
             alt=""
             width={200}
             height={300}
-            src="/img/1.jpg"
+            src="/img/img.png"
             className="w-40 h-auto pt-2"
           />
 
@@ -302,7 +324,7 @@ export default function Home() {
             alt=""
             width={200}
             height={300}
-            src="/img/1.jpg"
+            src="/img/img.png"
             className="w-40 h-auto pt-2"
           />
 
@@ -352,7 +374,7 @@ export default function Home() {
             alt=""
             width={200}
             height={300}
-            src="/img/1.jpg"
+            src="/img/img.png"
             className="w-40 h-auto pt-2"
           />
 
@@ -405,7 +427,7 @@ export default function Home() {
             alt=""
             width={200}
             height={300}
-            src="/img/1.jpg"
+            src="/img/img.png"
             className="w-40 h-auto pt-2"
           />
 
@@ -442,48 +464,81 @@ export default function Home() {
           <input
             type="text"
             placeholder="Company"
-            className="bg-[#D8B55A] text-black placeholder-black/60 p-2 rounded focus:outline-none"
-            onChange={(e) => setForm({ ...form, company: e.target.value })}
+            className={`bg-[#D8B55A] p-2 rounded ${
+              errors.company ? "border border-red-600" : ""
+            }`}
+            onChange={(e) => {
+              setForm({ ...form, company: e.target.value });
+              setErrors({ ...errors, company: undefined });
+            }}
           />
+          {errors.company && (
+            <p className="text-red-500 text-xs">{errors.company}</p>
+          )}
 
           <input
             type="text"
             placeholder="Nama"
-            className="bg-[#D8B55A] text-black placeholder-black/60 p-2 rounded focus:outline-none"
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
+              errors.name ? "border border-red-600" : ""
+            }`}
+            onChange={(e) => {
+              setForm({ ...form, name: e.target.value });
+              setErrors({ ...errors, name: undefined });
+            }}
           />
+          {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
 
           <select
-            className="bg-[#D8B55A] text-black placeholder-black/60 p-2 rounded focus:outline-none"
-            onChange={(e) =>
-              setForm({ ...form, kehadiran: Number(e.target.value) })
-            }
+            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
+              errors.kehadiran ? "border border-red-600" : ""
+            }`}
+            onChange={(e) => {
+              setForm({ ...form, kehadiran: Number(e.target.value) });
+              setErrors({ ...errors, kehadiran: undefined });
+            }}
           >
             <option value="">Kehadiran</option>
             <option value="1">Hadir</option>
             <option value="0">Tidak Hadir</option>
           </select>
+          {errors.kehadiran && (
+            <p className="text-red-500 text-xs">{errors.kehadiran}</p>
+          )}
 
-          <label className="flex flex-col border rounded p-3 cursor-pointer bg-[#D8B55A]">
+          <label
+            className={`flex flex-col rounded p-3 cursor-pointer bg-[#D8B55A] ${
+              errors.tiket ? "border border-red-600" : "border"
+            }`}
+          >
             <span className="text-sm mb-1">Tiket</span>
+
             <input
               type="file"
               className="hidden"
-              onChange={(e) =>
-                setForm({ ...form, tiket: e.target.files?.[0] ?? null })
-              }
+              onChange={(e) => {
+                setForm({ ...form, tiket: e.target.files?.[0] ?? null });
+                setErrors({ ...errors, tiket: undefined });
+              }}
             />
-            <div className="border p-2 rounded text-center">
+
+            <div className="border p-2 rounded text-center bg-white/30">
               {form.tiket ? form.tiket.name : "Choose File"}
             </div>
           </label>
+          {errors.tiket && (
+            <p className="text-red-500 text-xs">{errors.tiket}</p>
+          )}
 
-          {submitButton ? (
-            <button className="bg-amber-300 p-2 rounded" onClick={handleSubmit}>
+          {isSubmit ? (
+            <button
+              className="bg-[#001A3F] text-white p-2 rounded"
+              onClick={handleSubmit}
+            >
               Submiting...
             </button>
           ) : (
-            <button className="bg-amber-300 p-2 rounded" onClick={handleSubmit}>
+            <button className="bg-[#D2DFE8] p-2 rounded" onClick={handleSubmit}>
               Submit
             </button>
           )}
