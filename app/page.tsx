@@ -183,8 +183,8 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={300}
-                src="/img/img.png"
-                className="w-20 h-auto object-contain"
+                src="/logo/oi.png"
+                className="w-20 h-auto object-contain scale-200"
               />
 
               <div className="text-left text-[10px]">
@@ -209,8 +209,8 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={300}
-                src="/img/img.png"
-                className="w-20 h-auto object-contain"
+                src="/logo/va.png"
+                className="w-20 h-auto object-contain scale-200"
               />
 
               <div className="text-left text-[10px]">
