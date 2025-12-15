@@ -87,7 +87,7 @@ export default function Home() {
           />
         </div>
         <div
-          className="flex flex-col text-xl text-center gap-12"
+          className="flex flex-col text-xl text-center gap-12 pb-30"
           style={{ color: "#D8B55A" }}
         >
           <div className="font-bold">
@@ -107,7 +107,7 @@ export default function Home() {
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
       >
-        <div className="snap-start flex flex-col items-center py-5">
+        <div className="snap-start flex flex-col items-center py-10">
           <Header />
           <div
             className="flex flex-col text-center items-center gap-1"
@@ -135,7 +135,7 @@ export default function Home() {
           width={200}
           height={300}
           src="/logo/astraNSM.png"
-          className="w-40 h-auto ml-10 mb-15"
+          className="w-40 h-auto ml-10 mb-35"
         />
       </div>
 
@@ -144,7 +144,7 @@ export default function Home() {
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
       >
-        <div className="snap-start flex flex-col items-center py-5">
+        <div className="snap-start flex flex-col items-center py-10">
           <Header />
 
           <Image
@@ -210,7 +210,7 @@ export default function Home() {
                 width={200}
                 height={300}
                 src="/logo/ya.png"
-                className="w-20 h-auto object-contain scale-200"
+                className="w-20 h-auto object-contain scale-200 relative -left-10"
               />
 
               <div className="text-left text-[10px]">
@@ -235,7 +235,7 @@ export default function Home() {
 
       {/* MERCURE */}
       <div
-        className="h-full snap-start justify-between flex flex-col items-center py-5
+        className="h-full snap-start justify-between flex flex-col items-center py-10
       bg-[url('/bg/mobile.jpg')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
@@ -293,7 +293,7 @@ export default function Home() {
 
       {/* Tembak Langit */}
       <div
-        className="h-full snap-start justify-between flex flex-col items-center py-5
+        className="h-full snap-start justify-between flex flex-col items-center py-10
       bg-[url('/bg/mobile.jpg')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
@@ -345,7 +345,7 @@ export default function Home() {
 
       {/* Batamia Oleh-Oleh */}
       <div
-        className="h-full snap-start font-bold justify-between flex flex-col items-center py-5
+        className="h-full snap-start font-bold justify-between flex flex-col items-center py-10
       bg-[url('/bg/mobile.jpg')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
@@ -395,7 +395,7 @@ export default function Home() {
 
       {/* Kelong Baba */}
       <div
-        className="h-full snap-start justify-between flex flex-col items-center py-5
+        className="h-full snap-start justify-between flex flex-col items-center py-10
       bg-[url('/bg/mobile.jpg')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
@@ -448,14 +448,14 @@ export default function Home() {
 
       {/* PAGE LAST */}
       <div
-        className="h-screen snap-start justify-between relative flex flex-col items-center py-5
+        className="h-screen snap-start justify-between relative flex flex-col items-center py-10
       bg-[url('/bg/mobile.jpg')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
       >
         <Header />
 
-        <div className="text-3xl text-center font" style={{ color: "#D8B55A" }}>
+        <div className="text-3xl text-center font-bold" style={{ color: "#D8B55A" }}>
           <div>RSVP</div>
           <div>CONFIRMATION</div>
         </div>
