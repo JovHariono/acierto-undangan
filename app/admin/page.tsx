@@ -9,15 +9,21 @@ const Admin = () => {
   const [isDownload, setIsDownload] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(`${process.env.NEXT_PUBLIC_BE_URL}/attendance`)
-      .then((data) => {
-        const res = data;
-        setRows(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const fetchData = () => {
+      axios
+        .get(`${process.env.NEXT_PUBLIC_BE_URL}/attendance`)
+        .then((res) => {
+          setRows(res.data);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    };
+
+    fetchData();
+
+    const interval = setInterval(fetchData, 20000);
+    return () => clearInterval(interval);
   }, []);
 
   const handleDownload = async (id: Number) => {
@@ -40,7 +46,7 @@ const Admin = () => {
       a.download = fileName;
       a.click();
       URL.revokeObjectURL(url);
-      setIsDownload(false)
+      setIsDownload(false);
     } catch (err) {
       console.error(err);
     }
@@ -80,7 +86,7 @@ const Admin = () => {
                       Downloading...
                     </button>
                   ) : (
-                    <button 
+                    <button
                       className="px-3 py-1 border rounded"
                       onClick={() => handleDownload(r.id)}
                     >

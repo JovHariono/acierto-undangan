@@ -51,6 +51,12 @@ export default function Home() {
       })
       .then((res) => {
         console.log(res);
+        setForm({
+          company: "",
+          name: "",
+          kehadiran: 0,
+          tiket: null,
+        });
       })
       .catch((err) => {
         console.log(err);
