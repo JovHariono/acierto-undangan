@@ -183,7 +183,7 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={300}
-                src="/img/img.png"
+                src="/logo/oi.png"
                 className="w-20 h-auto object-contain scale-200"
               />
 
@@ -209,7 +209,7 @@ export default function Home() {
                 alt=""
                 width={200}
                 height={300}
-                src="/img/img.png"
+                src="/logo/ya.png"
                 className="w-20 h-auto object-contain scale-200"
               />
 
