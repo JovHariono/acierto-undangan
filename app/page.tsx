@@ -32,8 +32,11 @@ export default function Home() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    if (isSubmit) return;
+
     setIsSubmit(true);
+
     if (!validateForm()) {
       setIsSubmit(false);
       return;
@@ -45,31 +48,20 @@ export default function Home() {
     data.append("kehadiran", String(form.kehadiran));
     if (form.tiket) data.append("tiket", form.tiket);
 
-    axios
-      .post(`${process.env.NEXT_PUBLIC_BE_URL}/attendance`, data, {
-        headers: { "Content-Type": "multipart/form-data" },
-      })
-      .then((res) => {
-        console.log(res);
-        setForm({
-          company: "",
-          name: "",
-          kehadiran: 0,
-          tiket: null,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => {
-        setIsSubmit(false);
-        setForm({
-          company: "",
-          name: "",
-          kehadiran: 0,
-          tiket: null,
-        });
+    try {
+      await axios.post(`${process.env.NEXT_PUBLIC_BE_URL}/attendance`, data);
+
+      setForm({
+        company: "",
+        name: "",
+        kehadiran: 0,
+        tiket: null,
       });
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsSubmit(false);
+    }
   };
 
   return (
@@ -461,7 +453,10 @@ export default function Home() {
       >
         <Header />
 
-        <div className="text-3xl text-center font-bold" style={{ color: "#D8B55A" }}>
+        <div
+          className="text-3xl text-center font-bold"
+          style={{ color: "#D8B55A" }}
+        >
           <div>RSVP</div>
           <div>CONFIRMATION</div>
         </div>
@@ -521,6 +516,8 @@ export default function Home() {
 
             <input
               type="file"
+              accept="image/*"
+              capture="environment"
               className="hidden"
               onChange={(e) => {
                 setForm({ ...form, tiket: e.target.files?.[0] ?? null });
@@ -536,18 +533,14 @@ export default function Home() {
             <p className="text-red-500 text-xs">{errors.tiket}</p>
           )}
 
-          {isSubmit ? (
-            <button
-              className="bg-[#001A3F] text-white p-2 rounded"
-              onClick={handleSubmit}
-            >
-              Submiting...
-            </button>
-          ) : (
-            <button className="bg-[#D2DFE8] p-2 rounded" onClick={handleSubmit}>
-              Submit
-            </button>
-          )}
+          <button
+            type="button"
+            onClick={handleSubmit}
+            className="bg-[#D2DFE8] p-2 rounded touch-manipulation"
+            disabled={isSubmit}
+          >
+            {isSubmit ? "Submitting..." : "Submit"}
+          </button>
         </div>
         <Footer />
       </div>

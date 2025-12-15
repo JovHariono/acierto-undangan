@@ -6,7 +6,8 @@ import { AttendanceType } from "../_type/AttendanceType";
 
 const Admin = () => {
   const [rows, setRows] = useState<AttendanceType[]>([]);
-  const [isDownload, setIsDownload] = useState(false);
+  const [downloadingId, setDownloadingId] = useState<number | null>(null);
+  const [deletingId, setDeletingId] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchData = () => {
@@ -26,9 +27,10 @@ const Admin = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleDownload = async (id: Number) => {
+  const handleDownload = async (id: number) => {
     try {
-      setIsDownload(true);
+      setDownloadingId(id);
+
       const res = await axios.get(
         `${process.env.NEXT_PUBLIC_BE_URL}/attendance/${id}/tiket`,
         { responseType: "blob" }
@@ -39,16 +41,42 @@ const Admin = () => {
         res.headers["content-type"] || "application/octet-stream";
 
       const blob = new Blob([res.data], { type: contentType });
-
       const url = window.URL.createObjectURL(blob);
+
       const a = document.createElement("a");
       a.href = url;
       a.download = fileName;
+      document.body.appendChild(a);
       a.click();
+
+      a.remove();
       URL.revokeObjectURL(url);
-      setIsDownload(false);
     } catch (err) {
       console.error(err);
+      alert("Download failed");
+    } finally {
+      setDownloadingId(null);
+    }
+  };
+
+  const handleDelete = async (id: number) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this attendance? This action cannot be undone."
+    );
+
+    if (!confirmed) return;
+
+    try {
+      setDeletingId(id);
+
+      await axios.delete(`${process.env.NEXT_PUBLIC_BE_URL}/attendance/${id}`);
+
+      setRows((prev) => prev.filter((r) => r.id !== id));
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete data");
+    } finally {
+      setDeletingId(null);
     }
   };
 
@@ -63,7 +91,8 @@ const Admin = () => {
             <th className="border p-2">Name</th>
             <th className="border p-2">Kehadiran</th>
             <th className="border p-2">File</th>
-            <th className="border p-2">Action</th>
+            <th className="border p-2">Download</th>
+            <th className="border p-2">Delete</th>
           </tr>
         </thead>
 
@@ -78,19 +107,38 @@ const Admin = () => {
               </td>
               <td className="border p-2 text-center">
                 {r.tiket &&
-                  (isDownload ? (
+                  (downloadingId === r.id ? (
                     <button
-                      className="px-3 py-1 border rounded opacity-50 cursor-not-allowed"
+                      className="px-3 py-1 rounded bg-gray-300 cursor-not-allowed"
                       disabled
                     >
                       Downloading...
                     </button>
                   ) : (
                     <button
-                      className="px-3 py-1 border rounded"
+                      className="px-3 py-1 rounded border hover:bg-gray-100"
                       onClick={() => handleDownload(r.id)}
                     >
                       Download
+                    </button>
+                  ))}
+              </td>
+
+              <td className="border p-2 text-center">
+                {r.tiket &&
+                  (deletingId === r.id ? (
+                    <button
+                      className="px-3 py-1 rounded bg-red-300 text-white cursor-not-allowed"
+                      disabled
+                    >
+                      Deleting...
+                    </button>
+                  ) : (
+                    <button
+                      className="px-3 py-1 rounded bg-red-600 text-white hover:bg-red-700"
+                      onClick={() => handleDelete(r.id)}
+                    >
+                      Delete
                     </button>
                   ))}
               </td>
