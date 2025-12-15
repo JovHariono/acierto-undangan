@@ -114,13 +114,13 @@ export default function Home() {
             <h1 className="text-3xl text-center pt-7 font-bold">INVITATION</h1>
 
             <div className="space-y-4 w-[90%] p-10 text">
-              <p className="text-left">
+              <p className="text-left text-xs sm:text-base md:text-lg lg:text-lg">
                 Kami ingin mengundang keluarga besar Trading Domestic PT Astra
                 Otoparts Tbk. untuk ikut hadir di acara Nasional Sales Meeting
                 2026, guna membahas dan merencanakan tahun yang akan datang.
               </p>
 
-              <p className="text-right text-white">
+              <p className="text-right text-white text-xs sm:text-base md:text-lg lg:text-lg">
                 We would like to invite the big family of Trading Domestic of PT
                 Astra Otoparts Tbk to attend the National Sales Meeting 2026, to
                 discuss and plan for this year.
@@ -176,7 +176,7 @@ export default function Home() {
             className="flex flex-col text-center items-center pt-4"
             style={{ color: "#D8B55A" }}
           >
-            <div className="flex gap-8 px-10 pt-4">
+            <div className="flex sm:gap-5 md:gap-8 lg:gap-8 px-8 pt-4">
               <Image
                 alt=""
                 width={200}
@@ -185,7 +185,7 @@ export default function Home() {
                 className="w-20 h-auto object-contain scale-200"
               />
 
-              <div className="text-left text-[10px]">
+              <div className="text-left text-[10px] sm:px-10">
                 <p className="font-bold">OPPORTUNITY IDENTIFICATION</p>
                 <p>
                   Tahap menemukan dan memahami peluang yang ada di lapangan
@@ -193,7 +193,7 @@ export default function Home() {
                   kebutuhan untuk langkah selanjutnya.
                 </p>
                 <div className="text-right text-white">
-                  <p className="pl-6">
+                  <p className="lg:pl-6">
                     The first stage is to identify and understand the
                     opportunities available in the field before Analyzing those
                     opportunities in detail to uncover root causes &
@@ -202,7 +202,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-8 px-10 pt-4">
+            <div className="flex sm:gap-5 md:gap-8 lg:gap-8 px-8 pt-4">
               <Image
                 alt=""
                 width={200}
@@ -211,14 +211,14 @@ export default function Home() {
                 className="w-20 h-auto object-contain scale-200 relative -left-10"
               />
 
-              <div className="text-left text-[10px]">
+              <div className="text-left text-[10px] sm:px-10">
                 <p className="font-bold">YIELD ACTIVATION</p>
                 <p>
                   Membuat target yang ingin dicapai dari peluang yang telah di
                   analisa dan melakukan eksekusi dalam bentuk tindakan nyata dan
                   baru sehingga outcome menjadi jelas dan terukur.
                 </p>
-                <div className="text-right text-white pl-6">
+                <div className="text-right text-white lg:pl-6">
                   <p>
                     Setting achievable targets from analyzed opportunities and
                     executing them through extraordinary actions, ensuring
@@ -244,8 +244,7 @@ export default function Home() {
           style={{ color: "#D8B55A" }}
         >
           <div className="">
-            <h1 className="text-xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-xl text-center pt-2">MEETING</h1>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%] pt-2">
@@ -302,8 +301,7 @@ export default function Home() {
           style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
-            <h1 className="text-2xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-2xl text-center pt-2">MEETING</h1>
+            <h1 className="text-2xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%] pt-2">
@@ -354,8 +352,7 @@ export default function Home() {
           style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
-            <h1 className="text-2xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-2xl text-center pt-2">MEETING</h1>
+            <h1 className="text-2xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%] pt-2">
@@ -404,8 +401,7 @@ export default function Home() {
           style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
-            <h1 className="text-2xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-2xl text-center pt-2">MEETING</h1>
+            <h1 className="text-2xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%] pt-2">
@@ -454,7 +450,7 @@ export default function Home() {
         <Header />
 
         <div
-          className="text-3xl text-center font-bold"
+          className="text-3xl text-center font-bold mb-5"
           style={{ color: "#D8B55A" }}
         >
           <div>RSVP</div>
