@@ -530,7 +530,6 @@ export default function Home() {
             <input
               type="file"
               accept="image/*"
-              capture="environment"
               className="hidden"
               onChange={(e) => {
                 setForm({ ...form, tiket: e.target.files?.[0] ?? null });
