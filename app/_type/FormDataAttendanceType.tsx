@@ -1,6 +1,6 @@
 export type FormDataAttendanceType = {
   company: string;
   name: string;
-  kehadiran: number | null;
+  kehadiran: Number | null;
   tiket: File | null;
 };

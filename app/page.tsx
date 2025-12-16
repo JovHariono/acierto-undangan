@@ -11,7 +11,7 @@ export default function Home() {
   const [form, setForm] = useState<FormDataAttendanceType>({
     company: "",
     name: "",
-    kehadiran: null,
+    kehadiran: 0,
     tiket: null,
   });
   const [isSubmit, setIsSubmit] = useState(false);
@@ -69,7 +69,7 @@ export default function Home() {
       setForm({
         company: "",
         name: "",
-        kehadiran: null,
+        kehadiran: 0,
         tiket: null,
       });
     } catch (err) {
@@ -264,20 +264,20 @@ export default function Home() {
           </div>
 
           <div className="w-[60%] pt-2">
-            <h1 className="text-center pt-2">AGENDA</h1>
+            <h1 className="text-center ">AGENDA</h1>
 
             <div>
-              <p className="text-sm">MEETING DAY</p>
-              <p className="text-sm">13 . 01 . 26 & 14 . 01 . 26</p>
-              <p className="text-sm">at. GRAND MERCURE</p>
-              <p className="text-sm">Dresscode Day 1 : </p>
-              <p className="text-sm">Kemeja Putih - Jeans</p>
+              <p className="text-xs">MEETING DAY</p>
+              <p className="text-xs">13 . 01 . 26 & 14 . 01 . 26</p>
+              <p className="text-xs">at. GRAND MERCURE</p>
+              <p className="text-xs">Dresscode Day 1 : </p>
+              <p className="text-xs">Kemeja Putih - Jeans</p>
             </div>
 
-            <div className="pt-4">
-              <p className="text-sm">Dresscode Day 2 : </p>
-              <p className="text-sm">Kemeja Hitam - Jeans</p>
-              <p className="text-sm">09:00 - 17:00</p>
+            <div className="pt-2">
+              <p className="text-xs">Dresscode Day 2 : </p>
+              <p className="text-xs">Kemeja Hitam - Jeans</p>
+              <p className="text-xs">09:00 - 17:00</p>
             </div>
           </div>
 
@@ -317,18 +317,18 @@ export default function Home() {
           style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
-            <h1 className="text-2xl text-center">NATIONAL SALES MEETING</h1>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%] pt-2">
-            <h1 className="text-xl text-center pt-2">AGENDA</h1>
+            <h1 className="text-center ">AGENDA</h1>
 
             <div>
-              <p>AWARDING NIGHT 14 . 01 . 26</p>
-              <p className="">at. Tembak Langit</p>
-              <p className="">Dresscode : </p>
-              <p className="">......</p>
-              <p className="">17:00 - 21:00</p>
+              <p className="text-xs">AWARDING NIGHT 14 . 01 . 26</p>
+              <p className="text-xs">at. Tembak Langit</p>
+              <p className="text-xs">Dresscode : </p>
+              <p className="text-xs">......</p>
+              <p className="text-xs">17:00 - 21:00</p>
             </div>
           </div>
 
@@ -368,16 +368,16 @@ export default function Home() {
           style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
-            <h1 className="text-2xl text-center">NATIONAL SALES MEETING</h1>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%] pt-2">
-            <h1 className="text-xl text-center pt-2">AGENDA</h1>
+            <h1 className="text-center ">AGENDA</h1>
 
             <div>
-              <p>Belanja Oleh-Oleh</p>
-              <p className="">13 . 01 . 26 & 14 . 01 . 26</p>
-              <p className="">at. Batamia Oleh-Oleh</p>
+              <p className="text-xs">Belanja Oleh-Oleh</p>
+              <p className="text-xs">13 . 01 . 26 & 14 . 01 . 26</p>
+              <p className="text-xs">at. Batamia Oleh-Oleh</p>
             </div>
           </div>
 
@@ -417,19 +417,19 @@ export default function Home() {
           style={{ color: "#D8B55A" }}
         >
           <div className="pt-4">
-            <h1 className="text-2xl text-center">NATIONAL SALES MEETING</h1>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%] pt-2">
-            <h1 className="text-xl text-center pt-2">AGENDA</h1>
+            <h1 className="text-center ">AGENDA</h1>
 
             <div>
               <p>CLOSING DINNER</p>
-              <p className="">14 . 01 . 26</p>
-              <p className="">at. KELONG BABA SEAFOOD</p>
-              <p className="">Dresscode : </p>
-              <p className="">......</p>
-              <p className="">18:00 - 21:00</p>
+              <p className="text-xs">14 . 01 . 26</p>
+              <p className="text-xs">at. KELONG BABA SEAFOOD</p>
+              <p className="text-xs">Dresscode : </p>
+              <p className="text-xs">......</p>
+              <p className="text-xs">18:00 - 21:00</p>
             </div>
           </div>
 
