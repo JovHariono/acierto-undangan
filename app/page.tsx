@@ -42,14 +42,29 @@ export default function Home() {
       return;
     }
 
+    if (!process.env.NEXT_PUBLIC_BE_URL) {
+      console.error("NEXT_PUBLIC_BE_URL is not configured");
+      alert("Backend URL not configured. Please contact the app owner.");
+      setIsSubmit(false);
+      return;
+    }
+
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      alert("You appear to be offline. Check your network and try again.");
+      setIsSubmit(false);
+      return;
+    }
+
     const data = new FormData();
     data.append("company", form.company);
     data.append("name", form.name);
-    data.append("kehadiran", String(form.kehadiran));
+    data.append("kehadiran", String(form.kehadiran ?? ""));
     if (form.tiket) data.append("tiket", form.tiket);
 
     try {
       await axios.post(`${process.env.NEXT_PUBLIC_BE_URL}/attendance`, data);
+
+      alert("Submitted successfully.");
 
       setForm({
         company: "",
@@ -59,6 +74,7 @@ export default function Home() {
       });
     } catch (err) {
       console.error(err);
+      alert("Submit failed: " + ((err as any)?.message ?? "See console for details"));
     } finally {
       setIsSubmit(false);
     }
@@ -491,7 +507,8 @@ export default function Home() {
               errors.kehadiran ? "border border-red-600" : ""
             }`}
             onChange={(e) => {
-              setForm({ ...form, kehadiran: Number(e.target.value) });
+              const value = e.target.value === "" ? null : Number(e.target.value);
+              setForm({ ...form, kehadiran: value });
               setErrors({ ...errors, kehadiran: undefined });
             }}
           >
