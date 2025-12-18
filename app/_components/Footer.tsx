@@ -9,7 +9,7 @@ const Footer = () => {
           alt=""
           width={200}
           height={300}
-          src="/logo/footer/logoNSM.png"
+          src="/logo/astraNSM.png"
           className="w-27 h-auto object-contain"
         />
         

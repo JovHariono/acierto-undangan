@@ -458,7 +458,7 @@ export default function Home() {
             alt=""
             width={200}
             height={300}
-            src="/loc/batamia.jpg"
+            src="/loc/batamiaBaru.jpg"
             className="w-50 h-40 pt-2 object-contain"
           />
 
