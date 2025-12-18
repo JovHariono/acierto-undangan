@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="fixed top-0 w-full pt-4">
-      <div className="flex justify-center items-center h-20">
+    <div className="fixed top-0 w-full py-2 bg-[#001A3F]/5">
+      <div className="flex justify-center items-center h-20 ">
         <Image
           alt=""
           width={200}

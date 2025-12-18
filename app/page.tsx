@@ -125,7 +125,7 @@ export default function Home() {
       </div>
 
       <div
-        className="h-screen flex flex-col justify-between bg-[url('/bg/m2.png')]
+        className="h-screen flex flex-col justify-between bg-[url('/bg/m2n.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
       >
@@ -135,7 +135,12 @@ export default function Home() {
             className="flex flex-col text-center items-center gap-1"
             style={{ color: "#D8B55A" }}
           >
-            <h1 className="text-3xl text-center pt-7 font-bold" style={gradientStyle}>INVITATION</h1>
+            <h1
+              className="text-3xl text-center pt-7 font-bold"
+              style={gradientStyle}
+            >
+              INVITATION
+            </h1>
 
             <div className="space-y-4 w-[90%] p-10 text">
               <p className="text-left text-xs sm:text-base md:text-lg lg:text-lg">
@@ -470,15 +475,19 @@ export default function Home() {
       >
         <Header />
 
-        <div className="text-3xl text-center font-bold mb-5" style={gradientStyle}>
+        <div
+          className="text-3xl text-center font-bold mb-5"
+          style={gradientStyle}
+        >
           <div>RSVP</div>
           <div>CONFIRMATION</div>
         </div>
 
         <div className="flex flex-col gap-4 w-64">
           <select
-            className={`bg-[#D8B55A] p-2 rounded ${errors.company ? "border border-red-600" : ""
-              }`}
+            className={`bg-[#D8B55A] p-2 rounded ${
+              errors.company ? "border border-red-600" : ""
+            }`}
             onChange={(e) => {
               setForm({ ...form, company: e.target.value });
               setErrors({ ...errors, company: undefined });
@@ -573,8 +582,9 @@ export default function Home() {
           )}
 
           <select
-            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${errors.name ? "border border-red-600" : ""
-              }`}
+            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
+              errors.name ? "border border-red-600" : ""
+            }`}
             onChange={(e) => {
               setForm({ ...form, name: e.target.value });
               setErrors({ ...errors, name: undefined });
@@ -646,8 +656,9 @@ export default function Home() {
           {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
 
           <select
-            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${errors.kehadiran ? "border border-red-600" : ""
-              }`}
+            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
+              errors.kehadiran ? "border border-red-600" : ""
+            }`}
             onChange={(e) => {
               const value =
                 e.target.value === "" ? null : Number(e.target.value);
@@ -664,8 +675,9 @@ export default function Home() {
           )}
 
           <label
-            className={`flex flex-col rounded p-3 cursor-pointer bg-[#D8B55A] ${errors.tiket ? "border border-red-600" : "border"
-              }`}
+            className={`flex flex-col rounded p-3 cursor-pointer bg-[#D8B55A] ${
+              errors.tiket ? "border border-red-600" : "border"
+            }`}
           >
             <span className="text-sm mb-1">Tiket</span>
 
@@ -698,6 +710,14 @@ export default function Home() {
         </div>
         <Footer />
       </div>
+
+      <Image
+        src="/gif/emas.gif"
+        alt="emas"
+        width={200}
+        height={300}
+        className="fixed bottom-0 w-full"
+      />
     </div>
   );
 }
