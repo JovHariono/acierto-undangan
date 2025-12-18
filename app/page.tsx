@@ -149,7 +149,7 @@ export default function Home() {
           width={200}
           height={300}
           src="/logo/astraNSM.png"
-          className="w-50 h-auto ml-10 mb-10"
+          className="w-80 h-auto ml-10 mb-10"
         /> */}
       </div>
 
@@ -198,7 +198,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/rumahMakanJodoh.jpg"
-            className="w-50 h-auto pt-2 rounded-2xl"
+            className="w-80 h-auto pt-2 rounded-2xl"
           />
 
           <div className="flex pt-2 gap-4">
@@ -212,7 +212,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/GjrX7cQdT4vKrBBo8"
-              className="w-50 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
             >
               Rumah Makan Jodoh
             </a>
@@ -261,7 +261,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/grandMercure.jpg"
-            className="w-50 h-auto object-contain md: pt-2 rounded-2xl"
+            className="w-60 h-auto object-contain md: pt-2 rounded-2xl"
           />
 
           <div className="flex pt-2 gap-4">
@@ -275,7 +275,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/rVkoDKFcePvRdSVa8"
-              className="w-50 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
             >
               Grand Mercure
             </a>
@@ -318,7 +318,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/tembakLangit.jpg"
-            className="w-50 h-auto pt-2 rounded-2xl"
+            className="w-80 h-auto pt-2 rounded-2xl"
           />
 
           <div className="flex pt-2 gap-4">
@@ -332,7 +332,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/39y1WWHk8w23mDmNA"
-              className="w-50 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
             >
               Tembak Langit
             </a>
@@ -373,7 +373,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/batamiaBaru.jpg"
-            className="w-50 h-40 pt-2 object-contain rounded-2xl"
+            className="w-70 h-auto pt-2 object-contain rounded-2xl"
           />
 
           <div className="flex p-4 gap-4">
@@ -387,7 +387,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/rFH9o9Mz7VHcqwh89"
-              className="w-50 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
             >
               Batamia
             </a>
@@ -430,7 +430,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/kelongBaba.jpg"
-            className="w-50 h-auto pt-2 rounded-2xl"
+            className="w-70 h-auto pt-2 rounded-2xl"
           />
 
           <div className="flex pt-2 gap-4">
@@ -444,7 +444,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/bX9d6U9bkrbjbCV6A"
-              className="w-50 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
             >
               Kelong Baba
             </a>
@@ -568,9 +568,7 @@ export default function Home() {
             <p className="text-red-500 text-xs">{errors.company}</p>
           )}
 
-          <input
-            type="text"
-            placeholder="Nama"
+          <select
             className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
               errors.name ? "border border-red-600" : ""
             }`}
@@ -578,7 +576,70 @@ export default function Home() {
               setForm({ ...form, name: e.target.value });
               setErrors({ ...errors, name: undefined });
             }}
-          />
+          >
+            <option value="">Nama</option>
+            <option value="IRWAN KOHAR">IRWAN KOHAR</option>
+            <option value="ANDI GUNAWAN">ANDI GUNAWAN</option>
+            <option value="SALIPIN SURYO">SALIPIN SURYO</option>
+            <option value="SUHENDRA">SUHENDRA</option>
+            <option value="SALIM ANG">SALIM ANG</option>
+            <option value="ANDI XIANG">ANDI XIANG</option>
+            <option value="DJONY ANWAR">DJONY ANWAR</option>
+            <option value="JEFFREY KARIM">JEFFREY KARIM</option>
+            <option value="EDY SARMI">EDY SARMI</option>
+            <option value="ANRA RIDUAN MANURUNG">ANRA RIDUAN MANURUNG</option>
+            <option value="YOHANES WANGSA">YOHANES WANGSA</option>
+            <option value="KURNIAWAN">KURNIAWAN</option>
+            <option value="JUNUS SULEMAN">JUNUS SULEMAN</option>
+            <option value="ALEXANDER AGUNG">ALEXANDER AGUNG</option>
+            <option value="JAMES SIGIT CHANDRA">JAMES SIGIT CHANDRA</option>
+            <option value="YULIANA">YULIANA</option>
+            <option value="LIANY NOVIANTY LIAN">LIANY NOVIANTY LIAN</option>
+            <option value="WIRYANTO YUDRIS">WIRYANTO YUDRIS</option>
+            <option value="DAVID CASSIDY">DAVID CASSIDY</option>
+            <option value="RUDY HALIM JONG">RUDY HALIM JONG</option>
+            <option value="SUWANTO TANLIAS">SUWANTO TANLIAS</option>
+            <option value="LIE SUGIARTO">LIE SUGIARTO</option>
+            <option value="MILYA YUSMIN">MILYA YUSMIN</option>
+            <option value="AJIE MILYA">AJIE MILYA</option>
+            <option value="HELEN SURYA">HELEN SURYA</option>
+            <option value="HADI WIJAYA KANDOKO">HADI WIJAYA KANDOKO</option>
+            <option value="SUJONO SUWONDO">SUJONO SUWONDO</option>
+            <option value="SUHAITO">SUHAITO</option>
+            <option value="LIE SIN HONG">LIE SIN HONG</option>
+            <option value="SUSANTO LIE">SUSANTO LIE</option>
+            <option value="LEA YANAN LAY">LEA YANAN LAY</option>
+            <option value="JAUW HAN PING">JAUW HAN PING</option>
+            <option value="MONICA TANOJO">MONICA TANOJO</option>
+            <option value="DAVID JAUWHAN">DAVID JAUWHAN</option>
+            <option value="FAUZAN KURNIAWAN">FAUZAN KURNIAWAN</option>
+            <option value="STEPHEN ADI WIJAYA">STEPHEN ADI WIJAYA</option>
+            <option value="VICEROY ANG">VICEROY ANG</option>
+            <option value="TJAHJADI SUNIAN">TJAHJADI SUNIAN</option>
+            <option value="JONATHAN JODIE KOESNADI">
+              JONATHAN JODIE KOESNADI
+            </option>
+            <option value="KOESNADI">KOESNADI</option>
+            <option value="DJONO CUNG">DJONO CUNG</option>
+            <option value="RUCIPTO">RUCIPTO</option>
+            <option value="STEVEN INDRA">STEVEN INDRA</option>
+            <option value="BUDI SETIA DHARMA JASIN">
+              BUDI SETIA DHARMA JASIN
+            </option>
+            <option value="ROCKY RUSTAN">ROCKY RUSTAN</option>
+            <option value="KOOSNADY SJAIFUL">KOOSNADY SJAIFUL</option>
+            <option value="JEMMY TANUBRATA">JEMMY TANUBRATA</option>
+            <option value="REDMOND THO">REDMOND THO</option>
+            <option value="PRIADJI">PRIADJI</option>
+            <option value="NYONG LIWONGAN">NYONG LIWONGAN</option>
+            <option value="RICKY LIWONGAN">RICKY LIWONGAN</option>
+            <option value="VALERYNO PHOANTO">VALERYNO PHOANTO</option>
+            <option value="VALENTINO VINCENT JAUW">
+              VALENTINO VINCENT JAUW
+            </option>
+            <option value="JOHAN SETIAWAN">JOHAN SETIAWAN</option>
+            <option value="EDWIN THUNGGAWAN">EDWIN THUNGGAWAN</option>
+          </select>
           {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
 
           <select
