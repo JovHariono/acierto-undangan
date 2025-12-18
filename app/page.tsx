@@ -89,7 +89,7 @@ export default function Home() {
         className="h-screen snap-start
   flex flex-col items-center justify-between pt-30 pb-50 md:pb-20
 
-  bg-[url('/bg/mobile1.png')]
+  bg-[url('/bg/m1.png')]
   bg-cover bg-top bg-no-repeat
 
   md:bg-[url('/bg/desktop.jpg')]
@@ -117,7 +117,7 @@ export default function Home() {
       </div>
 
       <div
-        className="h-screen flex flex-col justify-between bg-[url('/bg/mobile2.png')]
+        className="h-screen flex flex-col justify-between bg-[url('/bg/m2.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
       >
@@ -155,105 +155,19 @@ export default function Home() {
 
       <div
         className="h-screen flex flex-col justify-between
-    bg-[url('/bg/mobile3.png')]
+    bg-[url('/bg/m3.png')]
     bg-cover bg-top bg-no-repeat
 
     md:bg-[url('/bg/desktop.jpg')]
     md:bg-center"
       >
-        <div className="snap-start flex flex-col items-center pt-30 pb-10">
-          <Header />
-
-          {/* <Image
-            alt=""
-            width={200}
-            height={300}
-            src="/logo/footer/logoGrowAll.png"
-            className="w-50 h-auto object-containn"
-          /> */}
-
-          {/* <div
-            className="flex flex-col items-start gap-1 w-full px-10"
-            style={{ color: "#D8B55A" }}
-          >
-            <div className="flex flex-col w-[90%]">
-              <h1 className="pt-3 text-xs">This is our moment to</h1>
-
-              <p className="font-bold text-sm">
-                grow—expanding our reach, strengthening our market presence,{" "}
-                <span className="font-normal text-xs">and</span>
-              </p>
-
-              <p className="font-bold text-sm">building sustainable success</p>
-              <p className="text-xs">
-                together as partners driving real change.
-              </p>
-            </div>
-          </div> */}
-
-          {/* <div
-            className="flex flex-col text-center items-center pt-4"
-            style={{ color: "#D8B55A" }}
-          >
-            <div className="flex sm:gap-5 md:gap-8 lg:gap-8 px-8 pt-4">
-              <Image
-                alt=""
-                width={200}
-                height={300}
-                src="/logo/oi.png"
-                className="w-20 h-auto object-containn scale-200"
-              />
-
-              <div className="text-left text-[10px] sm:px-10">
-                <p className="font-bold">OPPORTUNITY IDENTIFICATION</p>
-                <p>
-                  Tahap menemukan dan memahami peluang yang ada di lapangan
-                  sebelum menganalisa peluang untuk mengetahui akar masalah &
-                  kebutuhan untuk langkah selanjutnya.
-                </p>
-                <div className="text-right text-white">
-                  <p className="lg:pl-6">
-                    The first stage is to identify and understand the
-                    opportunities available in the field before Analyzing those
-                    opportunities in detail to uncover root causes &
-                    requirements before deciding the next steps.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex sm:gap-5 md:gap-8 lg:gap-8 px-8 pt-4">
-              <Image
-                alt=""
-                width={200}
-                height={300}
-                src="/logo/ya.png"
-                className="w-20 h-auto object-containn scale-200 relative -left-10"
-              />
-
-              <div className="text-left text-[10px] sm:px-10">
-                <p className="font-bold">YIELD ACTIVATION</p>
-                <p>
-                  Membuat target yang ingin dicapai dari peluang yang telah di
-                  analisa dan melakukan eksekusi dalam bentuk tindakan nyata dan
-                  baru sehingga outcome menjadi jelas dan terukur.
-                </p>
-                <div className="text-right text-white lg:pl-6">
-                  <p>
-                    Setting achievable targets from analyzed opportunities and
-                    executing them through extraordinary actions, ensuring
-                    outcomes that are clear and measurable.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
-        </div>
+        <div className="snap-start flex flex-col items-center pt-30 pb-10"></div>
       </div>
 
       {/* RUMAH MAKAN JODOH */}
       <div
         className="h-full snap-start justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
-      bg-[url('/bg/mobile.jpg')]
+      bg-[url('/bg/m4.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
       >
@@ -284,7 +198,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/rumahMakanJodoh.jpg"
-            className="w-50 h-auto pt-2"
+            className="w-50 h-auto pt-2 rounded-2xl"
           />
 
           <div className="flex pt-2 gap-4">
@@ -310,7 +224,7 @@ export default function Home() {
       {/* GRAND MERCURE */}
       <div
         className="h-full snap-start justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
-      bg-[url('/bg/mobile.jpg')]
+      bg-[url('/bg/m5.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
       >
@@ -347,7 +261,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/grandMercure.jpg"
-            className="w-50 h-auto object-contain md: pt-2"
+            className="w-50 h-auto object-contain md: pt-2 rounded-2xl"
           />
 
           <div className="flex pt-2 gap-4">
@@ -373,7 +287,7 @@ export default function Home() {
       {/* TEMBAK LANGIT */}
       <div
         className="h-full snap-start font-bold justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
-      bg-[url('/bg/mobile.jpg')]
+      bg-[url('/bg/m6.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
       >
@@ -404,7 +318,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/tembakLangit.jpg"
-            className="w-50 h-auto pt-2"
+            className="w-50 h-auto pt-2 rounded-2xl"
           />
 
           <div className="flex pt-2 gap-4">
@@ -430,7 +344,7 @@ export default function Home() {
       {/* BATAMIA */}
       <div
         className="h-full snap-start justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
-      bg-[url('/bg/mobile.jpg')]
+      bg-[url('/bg/m7.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
       >
@@ -459,7 +373,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/batamiaBaru.jpg"
-            className="w-50 h-40 pt-2 object-contain"
+            className="w-50 h-40 pt-2 object-contain rounded-2xl"
           />
 
           <div className="flex p-4 gap-4">
@@ -485,7 +399,7 @@ export default function Home() {
       {/* KELONG BABA */}
       <div
         className="h-full snap-start justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
-      bg-[url('/bg/mobile.jpg')]
+      bg-[url('/bg/m8.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
       >
@@ -516,7 +430,7 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/kelongBaba.jpg"
-            className="w-50 h-auto pt-2"
+            className="w-50 h-auto pt-2 rounded-2xl"
           />
 
           <div className="flex pt-2 gap-4">
@@ -542,7 +456,7 @@ export default function Home() {
       {/* PAGE LAST */}
       <div
         className="h-screen snap-start justify-between relative flex flex-col items-center pt-30 md:pt-25 pb-30
-      bg-[url('/bg/mobile.jpg')]
+      bg-[url('/bg/m9.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
       >
