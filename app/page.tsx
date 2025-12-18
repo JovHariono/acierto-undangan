@@ -16,6 +16,14 @@ export default function Home() {
   });
   const [isSubmit, setIsSubmit] = useState(false);
 
+  const gradientStyle = {
+    background: "linear-gradient(90deg, #D8B55A, #D2DFE8)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    color: "transparent",
+  } as any;
+
   const [errors, setErrors] = useState<
     Partial<Record<keyof FormDataAttendanceType, string>>
   >({});
@@ -127,7 +135,7 @@ export default function Home() {
             className="flex flex-col text-center items-center gap-1"
             style={{ color: "#D8B55A" }}
           >
-            <h1 className="text-3xl text-center pt-7 font-bold">INVITATION</h1>
+            <h1 className="text-3xl text-center pt-7 font-bold" style={gradientStyle}>INVITATION</h1>
 
             <div className="space-y-4 w-[90%] p-10 text">
               <p className="text-left text-xs sm:text-base md:text-lg lg:text-lg">
@@ -462,19 +470,15 @@ export default function Home() {
       >
         <Header />
 
-        <div
-          className="text-3xl text-center font-bold mb-5"
-          style={{ color: "#D8B55A" }}
-        >
+        <div className="text-3xl text-center font-bold mb-5" style={gradientStyle}>
           <div>RSVP</div>
           <div>CONFIRMATION</div>
         </div>
 
         <div className="flex flex-col gap-4 w-64">
           <select
-            className={`bg-[#D8B55A] p-2 rounded ${
-              errors.company ? "border border-red-600" : ""
-            }`}
+            className={`bg-[#D8B55A] p-2 rounded ${errors.company ? "border border-red-600" : ""
+              }`}
             onChange={(e) => {
               setForm({ ...form, company: e.target.value });
               setErrors({ ...errors, company: undefined });
@@ -569,9 +573,8 @@ export default function Home() {
           )}
 
           <select
-            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
-              errors.name ? "border border-red-600" : ""
-            }`}
+            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${errors.name ? "border border-red-600" : ""
+              }`}
             onChange={(e) => {
               setForm({ ...form, name: e.target.value });
               setErrors({ ...errors, name: undefined });
@@ -643,9 +646,8 @@ export default function Home() {
           {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
 
           <select
-            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
-              errors.kehadiran ? "border border-red-600" : ""
-            }`}
+            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${errors.kehadiran ? "border border-red-600" : ""
+              }`}
             onChange={(e) => {
               const value =
                 e.target.value === "" ? null : Number(e.target.value);
@@ -662,9 +664,8 @@ export default function Home() {
           )}
 
           <label
-            className={`flex flex-col rounded p-3 cursor-pointer bg-[#D8B55A] ${
-              errors.tiket ? "border border-red-600" : "border"
-            }`}
+            className={`flex flex-col rounded p-3 cursor-pointer bg-[#D8B55A] ${errors.tiket ? "border border-red-600" : "border"
+              }`}
           >
             <span className="text-sm mb-1">Tiket</span>
 
