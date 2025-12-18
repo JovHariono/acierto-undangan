@@ -184,7 +184,7 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4"
           style={{ color: "#D8B55A" }}
         >
-          <div className="">
+          <div className="" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
             <h1 className="text-xl text-center"> MEETING</h1>
           </div>
@@ -241,7 +241,7 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4 md:gap-0"
           style={{ color: "#D8B55A" }}
         >
-          <div className="pt-4">
+          <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
             <h1 className="text-xl text-center"> MEETING</h1>
           </div>
@@ -304,7 +304,7 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4"
           style={{ color: "#D8B55A" }}
         >
-          <div className="pt-4">
+          <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
             <h1 className="text-xl text-center"> MEETING</h1>
           </div>
@@ -361,7 +361,7 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4"
           style={{ color: "#D8B55A" }}
         >
-          <div className="pt-4">
+          <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
             <h1 className="text-xl text-center"> MEETING</h1>
           </div>
@@ -416,7 +416,7 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4"
           style={{ color: "#D8B55A" }}
         >
-          <div className="pt-4">
+          <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
             <h1 className="text-xl text-center"> MEETING</h1>
           </div>
