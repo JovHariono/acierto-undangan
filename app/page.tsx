@@ -129,20 +129,20 @@ export default function Home() {
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat"
       >
-        <div className="snap-start flex flex-col items-center pt-30 pb-10">
+        <div className="snap-start flex flex-col items-center pt-25 pb-10">
           <Header />
           <div
             className="flex flex-col text-center items-center gap-1"
             style={{ color: "#D8B55A" }}
           >
             <h1
-              className="text-3xl text-center pt-7 font-bold"
+              className="text-3xl text-center font-bold"
               style={gradientStyle}
             >
               INVITATION
             </h1>
 
-            <div className="space-y-4 w-[90%] p-10 text">
+            <div className="space-y-4 w-[90%] px-10 py-4 text">
               <p className="text-left text-xs sm:text-base md:text-lg lg:text-lg">
                 Kami ingin mengundang keluarga besar Trading Domestic PT Astra
                 Otoparts Tbk. untuk ikut hadir di acara Nasional Sales Meeting
