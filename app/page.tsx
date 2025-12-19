@@ -769,7 +769,7 @@ export default function Home() {
         <Footer />
       </div>
 
-      <Image
+      <img
         src="/gif/emas.gif"
         alt="emas"
         width={200}
