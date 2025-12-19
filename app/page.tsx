@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import axios from "axios";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
-import axios from "axios";
 import { FormDataAttendanceType } from "./_type/FormDataAttendanceType";
-import Image from "next/image";
 
 export default function Home() {
   const targetDate = new Date("2026-01-12T00:00:00");
@@ -120,7 +120,7 @@ export default function Home() {
       {/* PAGE 1 */}
       <div
         className="h-screen snap-start
-  flex flex-col items-center justify-between pt-30 pb-38 md:pb-20
+  flex flex-col items-center justify-between pt-30 pb-30 md:pb-20
 
   bg-[url('/bg/m1.png')]
   bg-cover bg-top bg-no-repeat
@@ -146,12 +146,12 @@ export default function Home() {
             <div>BATAM - GRAND MERCURE</div>
             <div>12 - 15 Januari 2026</div>
 
-            <div className="font-bold text-lg tracking-wide pt-4">
+            <div className="font-bold text-xs tracking-wide pt-4 mt-8" style={{ color: "#ffe193" }}>
               {String(timeLeft.days).padStart(2, "0")} HARI ;{" "}
               {String(timeLeft.hours).padStart(2, "0")} JAM ;{" "}
               {String(timeLeft.minutes).padStart(2, "0")} MENIT
             </div>
-            <div>Menuju NSM 2026</div>
+            <div className="text-xs" style={{ color: "#ffe193" }}>Menuju NSM 2026</div>
           </div>
         </div>
       </div>
@@ -446,7 +446,7 @@ export default function Home() {
       {/* INFINITY BEACH */}
       <div
         className="h-full snap-start justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
-      bg-[url('/bg/m7.png')]
+      bg-[url('/bg/m8.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
       >
@@ -504,7 +504,7 @@ export default function Home() {
       {/* KELONG BABA */}
       <div
         className="h-full snap-start justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
-      bg-[url('/bg/m8.png')]
+      bg-[url('/bg/m7.png')]
     md:bg-[url('/bg/desktop.jpg')]
     bg-cover bg-center bg-no-repeat font-bold"
       >
@@ -576,9 +576,8 @@ export default function Home() {
 
         <div className="flex flex-col gap-4 w-64">
           <select
-            className={`bg-[#ffe193] p-2 rounded ${
-              errors.company ? "border border-red-600" : ""
-            }`}
+            className={`bg-[#ffe193] p-2 rounded ${errors.company ? "border border-red-600" : ""
+              }`}
             onChange={(e) => {
               setForm({ ...form, company: e.target.value });
               setErrors({ ...errors, company: undefined });
@@ -673,9 +672,8 @@ export default function Home() {
           )}
 
           <select
-            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${
-              errors.name ? "border border-red-600" : ""
-            }`}
+            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${errors.name ? "border border-red-600" : ""
+              }`}
             onChange={(e) => {
               setForm({ ...form, name: e.target.value });
               setErrors({ ...errors, name: undefined });
@@ -747,9 +745,8 @@ export default function Home() {
           {errors.name && <p className="text-red-500 text-xs tracking-[0.05em]">{errors.name}</p>}
 
           <select
-            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${
-              errors.kehadiran ? "border border-red-600" : ""
-            }`}
+            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${errors.kehadiran ? "border border-red-600" : ""
+              }`}
             onChange={(e) => {
               const value =
                 e.target.value === "" ? null : Number(e.target.value);
@@ -766,9 +763,8 @@ export default function Home() {
           )}
 
           <label
-            className={`flex flex-col rounded p-3 cursor-pointer bg-[#ffe193] ${
-              errors.tiket ? "border border-red-600" : "border"
-            }`}
+            className={`flex flex-col rounded p-3 cursor-pointer bg-[#ffe193] ${errors.tiket ? "border border-red-600" : "border"
+              }`}
           >
             <span className="text-sm">Tiket</span>
             <span className="text-[8px] p-0.5">Max file upload 5Mb</span>
