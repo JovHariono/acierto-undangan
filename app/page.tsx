@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import axios from "axios";
@@ -8,6 +8,8 @@ import { FormDataAttendanceType } from "./_type/FormDataAttendanceType";
 import Image from "next/image";
 
 export default function Home() {
+  const targetDate = new Date("2026-01-12T00:00:00");
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
   const [form, setForm] = useState<FormDataAttendanceType>({
     company: "",
     name: "",
@@ -17,7 +19,7 @@ export default function Home() {
   const [isSubmit, setIsSubmit] = useState(false);
 
   const gradientStyle = {
-    background: "linear-gradient(90deg, #D8B55A, #D2DFE8)",
+    background: "linear-gradient(90deg, #ffe193, #D2DFE8)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
@@ -90,12 +92,35 @@ export default function Home() {
     }
   };
 
+  function getTimeLeft(target: Date) {
+    const now = new Date().getTime();
+    const diff = target.getTime() - now;
+
+    if (diff <= 0) {
+      return { days: 0, hours: 0, minutes: 0 };
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    return { days, hours, minutes };
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeLeft(targetDate));
+    }, 60 * 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory bg-[#001A3F]">
       {/* PAGE 1 */}
       <div
         className="h-screen snap-start
-  flex flex-col items-center justify-between pt-30 pb-50 md:pb-20
+  flex flex-col items-center justify-between pt-30 pb-38 md:pb-20
 
   bg-[url('/bg/m1.png')]
   bg-cover bg-top bg-no-repeat
@@ -115,11 +140,18 @@ export default function Home() {
         </div>
         <div
           className="flex flex-col text-xl text-center gap-8"
-          style={{ color: "#D8B55A" }}
+          style={{ color: "#ffe193" }}
         >
           <div className="font-bold text-[#D2DFE8]">
             <div>BATAM - GRAND MERCURE</div>
-            <div>12 - 14 Januari 2026</div>
+            <div>12 - 15 Januari 2026</div>
+
+            <div className="font-bold text-lg tracking-wide pt-4">
+              {String(timeLeft.days).padStart(2, "0")} HARI ;{" "}
+              {String(timeLeft.hours).padStart(2, "0")} JAM ;{" "}
+              {String(timeLeft.minutes).padStart(2, "0")} MENIT
+            </div>
+            <div>Menuju NSM 2026</div>
           </div>
         </div>
       </div>
@@ -133,7 +165,7 @@ export default function Home() {
           <Header />
           <div
             className="flex flex-col text-center items-center gap-1"
-            style={{ color: "#D8B55A" }}
+            style={{ color: "#ffe193" }}
           >
             <h1
               className="text-3xl text-center pt-1 font-bold"
@@ -143,13 +175,13 @@ export default function Home() {
             </h1>
 
             <div className="space-y-4 w-[90%] px-10 py-4 text">
-              <p className="text-left text-xs sm:text-base md:text-lg lg:text-lg">
+              <p className="text-left text-xs tracking-[0.05em] sm:text-base md:text-lg lg:text-lg">
                 Kami ingin mengundang keluarga besar Trading Domestic PT Astra
                 Otoparts Tbk. untuk ikut hadir di acara Nasional Sales Meeting
                 2026, guna membahas dan merencanakan tahun yang akan datang.
               </p>
 
-              <p className="text-right text-white text-xs sm:text-base md:text-lg lg:text-lg">
+              <p className="text-right text-white text-xs tracking-[0.05em] sm:text-base md:text-lg lg:text-lg">
                 We would like to invite the big family of Trading Domestic of PT
                 Astra Otoparts Tbk to attend the National Sales Meeting 2026, to
                 discuss and plan for this year.
@@ -187,7 +219,7 @@ export default function Home() {
         <Header />
         <div
           className="flex flex-col text-center items-center gap-4"
-          style={{ color: "#D8B55A" }}
+          style={{ color: "#ffe193" }}
         >
           <div className="" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
@@ -195,14 +227,15 @@ export default function Home() {
           </div>
 
           <div className="w-[80%] pt-2">
-            <h1 className="text-center ">AGENDA DAY 1</h1>
+            <h1 className="text-center tracking-[0.05em]">AGENDA DAY 1</h1>
 
             <div>
-              <p className="text-xs">WELCOMING DINNER</p>
-              <p className="text-xs">12 . 01 . 26</p>
-              <p className="text-xs">at. RUMAH MAKAN JODOH</p>
-              <p className="text-xs">Dresscode : Bebas Rapih</p>
-              <p className="text-xs">18:00 - 21:00</p>
+              <p className="text-xs tracking-[0.05em]">WELCOMING DINNER</p>
+              <p className="text-xs tracking-[0.05em]">12 Januari 26</p>
+              <p className="text-xs tracking-[0.05em]">at. RUMAH MAKAN JODOH</p>
+              <p className="text-xs tracking-[0.05em]">Dresscode : </p>
+              <p className="text-xs tracking-[0.05em]">Bebas - Rapih</p>
+              <p className="text-xs tracking-[0.05em]">18:00 - 21:00</p>
             </div>
           </div>
 
@@ -225,7 +258,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/GjrX7cQdT4vKrBBo8"
-              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
             >
               Rumah Makan Jodoh
             </a>
@@ -244,7 +277,7 @@ export default function Home() {
         <Header />
         <div
           className="flex flex-col text-center items-center gap-4 md:gap-0"
-          style={{ color: "#D8B55A" }}
+          style={{ color: "#ffe193" }}
         >
           <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
@@ -252,20 +285,20 @@ export default function Home() {
           </div>
 
           <div className="w-[80%]">
-            <h1 className="text-center ">AGENDA</h1>
+            <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
-              <p className="text-xs">MEETING DAY</p>
-              <p className="text-xs">13 . 01 . 26 & 14 . 01 . 26</p>
-              <p className="text-xs">at. GRAND MERCURE</p>
-              <p className="text-xs">Dresscode Day 1 : </p>
-              <p className="text-xs">Kemeja Putih - Jeans</p>
+              <p className="text-xs tracking-[0.05em]">MEETING DAY</p>
+              <p className="text-xs tracking-[0.05em]">13 Januari 26 & 14 Januari 26</p>
+              <p className="text-xs tracking-[0.05em]">at. GRAND MERCURE</p>
+              <p className="text-xs tracking-[0.05em]">Dresscode Day 1 : </p>
+              <p className="text-xs tracking-[0.05em]">Kemeja Putih - Jeans</p>
             </div>
 
             <div className="pt-2">
-              <p className="text-xs">Dresscode Day 2 : </p>
-              <p className="text-xs">Kemeja Hitam - Jeans</p>
-              <p className="text-xs">09:00 - 17:00</p>
+              <p className="text-xs tracking-[0.05em]">Dresscode Day 2 : </p>
+              <p className="text-xs tracking-[0.05em]">Kemeja Hitam - Jeans</p>
+              <p className="text-xs tracking-[0.05em]">09:00 - 17:00</p>
             </div>
           </div>
 
@@ -288,7 +321,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/rVkoDKFcePvRdSVa8"
-              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
             >
               Grand Mercure
             </a>
@@ -307,22 +340,23 @@ export default function Home() {
         <Header />
         <div
           className="flex flex-col text-center items-center gap-4"
-          style={{ color: "#D8B55A" }}
+          style={{ color: "#ffe193" }}
         >
           <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
             <h1 className="text-xl text-center"> MEETING</h1>
           </div>
 
-          <div className="w-[60%]">
-            <h1 className="text-center ">AGENDA</h1>
+          <div className="w-[80%]">
+            <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
-              <p className="text-xs">AWARDING NIGHT</p>
-              <p className="text-xs">14 . 01 . 26</p>
-              <p className="text-xs">at. Tembak Langit</p>
-              <p className="text-xs">Dresscode : </p>
-              <p className="text-xs">17:00 - 21:00</p>
+              <p className="text-xs tracking-[0.05em]">AWARDING NIGHT</p>
+              <p className="text-xs tracking-[0.05em]">14 Januari 26</p>
+              <p className="text-xs tracking-[0.05em]">at. Tembak Langit</p>
+              <p className="text-xs tracking-[0.05em]">Dresscode : </p>
+              <p className="text-xs tracking-[0.05em]">Smart Casual (Warna Terang)</p>
+              <p className="text-xs tracking-[0.05em]">17:00 - 21:00</p>
             </div>
           </div>
 
@@ -345,7 +379,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/39y1WWHk8w23mDmNA"
-              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
             >
               Tembak Langit
             </a>
@@ -364,7 +398,7 @@ export default function Home() {
         <Header />
         <div
           className="flex flex-col text-center items-center gap-4"
-          style={{ color: "#D8B55A" }}
+          style={{ color: "#ffe193" }}
         >
           <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
@@ -372,12 +406,12 @@ export default function Home() {
           </div>
 
           <div className="w-[60%]">
-            <h1 className="text-center ">AGENDA</h1>
+            <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
-              <p className="text-xs">BELANJA OLEH-OLEH</p>
-              <p className="text-xs">13 . 01 . 26 & 14 . 01 . 26</p>
-              <p className="text-xs">at. Batamia Oleh-Oleh</p>
+              <p className="text-xs tracking-[0.05em]">BELANJA OLEH-OLEH</p>
+              <p className="text-xs tracking-[0.05em]">13 Januari 26 & 14 Januari 26</p>
+              <p className="text-xs tracking-[0.05em]">at. Batamia Oleh-Oleh</p>
             </div>
           </div>
 
@@ -400,7 +434,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/rFH9o9Mz7VHcqwh89"
-              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
             >
               Batamia
             </a>
@@ -419,7 +453,7 @@ export default function Home() {
         <Header />
         <div
           className="flex flex-col text-center items-center gap-4"
-          style={{ color: "#D8B55A" }}
+          style={{ color: "#ffe193" }}
         >
           <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
@@ -427,14 +461,15 @@ export default function Home() {
           </div>
 
           <div className="w-[60%]">
-            <h1 className="text-center ">AGENDA</h1>
+            <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
-              <p className="text-xs">OUTDOOR ACTIVITY</p>
-              <p className="text-xs">14 . 01 . 26</p>
-              <p className="text-xs">at. INFINITY BEACH CLUB</p>
-              <p className="text-xs">Dresscode : xxxx</p>
-              <p className="text-xs">15:00 - 16:30</p>
+              <p className="text-xs tracking-[0.05em]">OUTDOOR ACTIVITY</p>
+              <p className="text-xs tracking-[0.05em]">14 Januari 26</p>
+              <p className="text-xs tracking-[0.05em]">at. INFINITY BEACH CLUB</p>
+              <p className="text-xs tracking-[0.05em]">Dresscode : </p>
+              <p className="text-xs tracking-[0.05em]">Kaos</p>
+              <p className="text-xs tracking-[0.05em]">15:00 - 16:30</p>
             </div>
           </div>
 
@@ -457,7 +492,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/WJsieJTu47xuQYem7"
-              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
             >
               Infinity Beach Club
             </a>
@@ -476,7 +511,7 @@ export default function Home() {
         <Header />
         <div
           className="flex flex-col text-center items-center gap-4"
-          style={{ color: "#D8B55A" }}
+          style={{ color: "#ffe193" }}
         >
           <div className="pt-4" style={gradientStyle}>
             <h1 className="text-xl text-center">NATIONAL SALES</h1>
@@ -484,14 +519,13 @@ export default function Home() {
           </div>
 
           <div className="w-[80%]">
-            <h1 className="text-center ">AGENDA</h1>
+            <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
               <p>CLOSING DINNER</p>
-              <p className="text-xs">14 . 01 . 26</p>
-              <p className="text-xs">at. KELONG BABA SEAFOOD</p>
-              <p className="text-xs">Dresscode : xxxx</p>
-              <p className="text-xs">18:00 - 21:00</p>
+              <p className="text-xs tracking-[0.05em]">14 Januari 26</p>
+              <p className="text-xs tracking-[0.05em]">at. KELONG BABA SEAFOOD</p>
+              <p className="text-xs tracking-[0.05em]">18:00 - 21:00</p>
             </div>
           </div>
 
@@ -514,7 +548,7 @@ export default function Home() {
 
             <a
               href="https://maps.app.goo.gl/bX9d6U9bkrbjbCV6A"
-              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
             >
               Kelong Baba
             </a>
@@ -542,7 +576,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-4 w-64">
           <select
-            className={`bg-[#D8B55A] p-2 rounded ${
+            className={`bg-[#ffe193] p-2 rounded ${
               errors.company ? "border border-red-600" : ""
             }`}
             onChange={(e) => {
@@ -635,11 +669,11 @@ export default function Home() {
             </option>
           </select>
           {errors.company && (
-            <p className="text-red-500 text-xs">{errors.company}</p>
+            <p className="text-red-500 text-xs tracking-[0.05em]">{errors.company}</p>
           )}
 
           <select
-            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
+            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${
               errors.name ? "border border-red-600" : ""
             }`}
             onChange={(e) => {
@@ -710,10 +744,10 @@ export default function Home() {
             <option value="JOHAN SETIAWAN">JOHAN SETIAWAN</option>
             <option value="EDWIN THUNGGAWAN">EDWIN THUNGGAWAN</option>
           </select>
-          {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
+          {errors.name && <p className="text-red-500 text-xs tracking-[0.05em]">{errors.name}</p>}
 
           <select
-            className={`bg-[#D8B55A] p-2 rounded focus:outline-none ${
+            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${
               errors.kehadiran ? "border border-red-600" : ""
             }`}
             onChange={(e) => {
@@ -728,11 +762,11 @@ export default function Home() {
             <option value="0">Tidak Hadir</option>
           </select>
           {errors.kehadiran && (
-            <p className="text-red-500 text-xs">{errors.kehadiran}</p>
+            <p className="text-red-500 text-xs tracking-[0.05em]">{errors.kehadiran}</p>
           )}
 
           <label
-            className={`flex flex-col rounded p-3 cursor-pointer bg-[#D8B55A] ${
+            className={`flex flex-col rounded p-3 cursor-pointer bg-[#ffe193] ${
               errors.tiket ? "border border-red-600" : "border"
             }`}
           >
@@ -754,7 +788,7 @@ export default function Home() {
             </div>
           </label>
           {errors.tiket && (
-            <p className="text-red-500 text-xs">{errors.tiket}</p>
+            <p className="text-red-500 text-xs tracking-[0.05em]">{errors.tiket}</p>
           )}
 
           <button
