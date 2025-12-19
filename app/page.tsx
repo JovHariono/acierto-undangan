@@ -136,7 +136,7 @@ export default function Home() {
             style={{ color: "#D8B55A" }}
           >
             <h1
-              className="text-3xl text-center font-bold"
+              className="text-3xl text-center pt-1 font-bold"
               style={gradientStyle}
             >
               INVITATION
@@ -711,13 +711,13 @@ export default function Home() {
         <Footer />
       </div>
 
-      <Image
+      {/* <Image
         src="/gif/emas.gif"
         alt="emas"
         width={200}
         height={300}
         className="fixed bottom-0 w-full"
-      />
+      /> */}
     </div>
   );
 }
