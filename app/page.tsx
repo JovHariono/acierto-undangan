@@ -409,6 +409,63 @@ export default function Home() {
         <Footer />
       </div>
 
+      {/* INFINITY BEACH */}
+      <div
+        className="h-full snap-start justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
+      bg-[url('/bg/m7.png')]
+    md:bg-[url('/bg/desktop.jpg')]
+    bg-cover bg-center bg-no-repeat font-bold"
+      >
+        <Header />
+        <div
+          className="flex flex-col text-center items-center gap-4"
+          style={{ color: "#D8B55A" }}
+        >
+          <div className="pt-4" style={gradientStyle}>
+            <h1 className="text-xl text-center">NATIONAL SALES</h1>
+            <h1 className="text-xl text-center"> MEETING</h1>
+          </div>
+
+          <div className="w-[60%]">
+            <h1 className="text-center ">AGENDA</h1>
+
+            <div>
+              <p className="text-xs">OUTDOOR ACTIVITY</p>
+              <p className="text-xs">14 . 01 . 26</p>
+              <p className="text-xs">at. INFINITY BEACH CLUB</p>
+              <p className="text-xs">Dresscode : xxxx</p>
+              <p className="text-xs">15:00 - 16:30</p>
+            </div>
+          </div>
+
+          <Image
+            alt=""
+            width={200}
+            height={300}
+            src="/loc/infinityBeachClub.jpg"
+            className="w-70 h-auto pt-2 object-contain rounded-2xl"
+          />
+
+          <div className="flex p-4 gap-4">
+            <Image
+              alt=""
+              width={200}
+              height={300}
+              src="/logo/gmap.png"
+              className="w-5 h-auto object-contain"
+            />
+
+            <a
+              href="https://maps.app.goo.gl/WJsieJTu47xuQYem7"
+              className="w-80 p-2 rounded bg-[#D8B55A] text-[#001A3F]"
+            >
+              Infinity Beach Club
+            </a>
+          </div>
+        </div>
+        <Footer />
+      </div>
+
       {/* KELONG BABA */}
       <div
         className="h-full snap-start justify-between flex flex-col items-center pt-30 md:pt-20 pb-30
@@ -679,7 +736,8 @@ export default function Home() {
               errors.tiket ? "border border-red-600" : "border"
             }`}
           >
-            <span className="text-sm mb-1">Tiket</span>
+            <span className="text-sm">Tiket</span>
+            <span className="text-[8px] p-0.5">Max file upload 5Mb</span>
 
             <input
               type="file"
