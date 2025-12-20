@@ -266,7 +266,7 @@ export default function Home() {
             <a
               href="https://maps.app.goo.gl/GjrX7cQdT4vKrBBo8"
               className="w-fit inline-flex items-center
-    px-3 py-2
+    px-5 py-3
     leading-none
     rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
@@ -370,7 +370,7 @@ export default function Home() {
             <a
               href="https://maps.app.goo.gl/rVkoDKFcePvRdSVa8"
               className="w-fit inline-flex items-center
-    px-3 py-2
+    px-5 py-3
     leading-none
     rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
@@ -433,7 +433,7 @@ export default function Home() {
             <a
               href="https://maps.app.goo.gl/39y1WWHk8w23mDmNA"
               className="w-fit inline-flex items-center
-    px-3 py-2
+    px-5 py-3
     leading-none
     rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
@@ -494,7 +494,7 @@ export default function Home() {
             <a
               href="https://maps.app.goo.gl/rFH9o9Mz7VHcqwh89"
               className="w-fit inline-flex items-center
-    px-3 py-2
+    px-5 py-3
     leading-none
     rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
@@ -561,7 +561,7 @@ export default function Home() {
             <a
               href="https://maps.app.goo.gl/WJsieJTu47xuQYem7"
               className="w-fit inline-flex items-center
-    px-3 py-2
+    px-5 py-3
     leading-none
     rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
@@ -623,7 +623,7 @@ export default function Home() {
             <a
               href="https://maps.app.goo.gl/bX9d6U9bkrbjbCV6A"
               className="w-fit inline-flex items-center
-    px-3 py-2
+    px-5 py-3
     leading-none
     rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
