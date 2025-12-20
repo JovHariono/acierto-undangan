@@ -144,7 +144,7 @@ export default function Home() {
         >
           <div className="font-bold text-[#D2DFE8]">
             <div>BATAM - GRAND MERCURE</div>
-            <div>12 - 15 Januari 2026</div>
+            <div>12 - 15 January 2026</div>
 
             <div
               className="font-bold text-xs tracking-wide pt-4 mt-8"
@@ -237,7 +237,7 @@ export default function Home() {
               <p className="text-sm tracking-[0.05em] pt-4">
                 "WELCOMING DINNER"
               </p>
-              <p className="text-sm tracking-[0.05em]">Monday, 12 Januari 2026</p>
+              <p className="text-sm tracking-[0.05em]">Monday, 12 January 2026</p>
               <p className="text-sm tracking-[0.05em]">at. RUMAH MAKAN JODOH</p>
               <p className="text-xs tracking-[0.05em] pt-4">
                 Dresscode : Free (Casual Attire)
@@ -314,7 +314,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center">
               <p className="text-xs tracking-[0.05em]">MEETING DAY 1</p>
               <p className="text-[10px] tracking-[0.05em]">
-                Tuesday, 13 Januari 2026
+                Tuesday, 13 January 2026
               </p>
               <p className="text-xs tracking-[0.05em]">
                 at. Ranantira Ballroom
@@ -337,7 +337,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center">
               <p className="text-xs tracking-[0.05em]">MEETING DAY 2</p>
               <p className="text-[10px] tracking-[0.05em]">
-                Wednesday, 14 Januari 2026
+                Wednesday, 14 January 2026
               </p>
               <p className="text-xs tracking-[0.05em]">
                 at. Ranantira Ballroom
@@ -403,7 +403,7 @@ export default function Home() {
             <div>
               <p className="text-sm tracking-[0.05em] pt-4">"AWARDING NIGHT"</p>
               <p className="text-sm tracking-[0.05em]">
-                Tuesday, 14Januari 2026
+                Tuesday, 14January 2026
               </p>
               <p className="text-sm tracking-[0.05em]">at. Tembak Langit</p>
               <p className="text-xs tracking-[0.05em] pt-4">
@@ -468,7 +468,7 @@ export default function Home() {
                 “Shopping from Local Batam Souvenir Store”
               </p>
               <p className="text-sm tracking-[0.05em]">
-                Tuesday, 13 Januari 2026 & Wednesday, 14 Januari 2026
+                Tuesday, 13 January 2026 & Wednesday, 14 January 2026
               </p>
               <p className="text-sm tracking-[0.05em] pt-2">at. Batamia Oleh-Oleh</p>
             </div>
@@ -529,7 +529,7 @@ export default function Home() {
                 "OUTDOOR ACTIVITY"
               </p>
               <p className="text-sm tracking-[0.05em]">
-                Wednesday, 14 Januari 2026
+                Wednesday, 14 January 2026
               </p>
               <p className="text-sm tracking-[0.05em]">
                 at. INFINITY BEACH CLUB
@@ -594,7 +594,7 @@ export default function Home() {
             <div className=" pt-4">
               <p>"CLOSING DINNER"</p>
               <p className="text-sm tracking-[0.05em]">
-                Wednesday, 14 Januari 2026
+                Wednesday, 14 January 2026
               </p>
               <p className="text-sm tracking-[0.05em]">
                 at. KELONG BABA SEAFOOD
