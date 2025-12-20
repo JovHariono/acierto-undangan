@@ -237,7 +237,7 @@ export default function Home() {
               <p className="text-sm tracking-[0.05em] pt-4">
                 "WELCOMING DINNER"
               </p>
-              <p className="text-sm tracking-[0.05em]">Monday, 12 Januari 26</p>
+              <p className="text-sm tracking-[0.05em]">Monday, 12 Januari 2026</p>
               <p className="text-sm tracking-[0.05em]">at. RUMAH MAKAN JODOH</p>
               <p className="text-xs tracking-[0.05em] pt-4">
                 Dresscode : Free (Casual Attire)
