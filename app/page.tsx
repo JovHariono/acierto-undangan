@@ -254,7 +254,7 @@ export default function Home() {
             className="w-80 h-auto pt-2 rounded-2xl"
           />
 
-          <div className="flex pt-2 gap-4 items-center">
+          <div className="flex pt-6 pb-4 gap-4 items-center">
             <Image
               alt=""
               width={200}
@@ -268,7 +268,7 @@ export default function Home() {
               className="w-fit inline-flex items-center
     px-3 py-2
     leading-none
-    rounded-md bg-[#ffe193] text-[#001A3F]"
+    rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
               Rumah Makan Jodoh
             </a>
@@ -358,7 +358,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex pt-2 gap-4 items-center">
+          <div className="flex pt-8 pb-4 gap-4 items-center">
             <Image
               alt=""
               width={200}
@@ -372,7 +372,7 @@ export default function Home() {
               className="w-fit inline-flex items-center
     px-3 py-2
     leading-none
-    rounded-md bg-[#ffe193] text-[#001A3F]"
+    rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
               Grand Mercure
             </a>
@@ -403,7 +403,7 @@ export default function Home() {
             <div>
               <p className="text-sm tracking-[0.05em] pt-4">"AWARDING NIGHT"</p>
               <p className="text-sm tracking-[0.05em]">
-                Tuesday, 14January 2026
+                Tuesday, 14 January 2026
               </p>
               <p className="text-sm tracking-[0.05em]">at. Tembak Langit</p>
               <p className="text-xs tracking-[0.05em] pt-4">
@@ -421,7 +421,7 @@ export default function Home() {
             className="w-80 h-auto pt-2 rounded-2xl"
           />
 
-          <div className="flex pt-2 gap-4 items-center">
+          <div className="flex pt-6 pb-4 gap-4 items-center">
             <Image
               alt=""
               width={200}
@@ -435,7 +435,7 @@ export default function Home() {
               className="w-fit inline-flex items-center
     px-3 py-2
     leading-none
-    rounded-md bg-[#ffe193] text-[#001A3F]"
+    rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
               Tembak Langit
             </a>
@@ -482,7 +482,7 @@ export default function Home() {
             className="w-70 h-auto pt-2 object-contain rounded-2xl"
           />
 
-          <div className="flex p-4 gap-4 items-center">
+          <div className="flex pt-6 pb-4 gap-4 items-center">
             <Image
               alt=""
               width={200}
@@ -496,7 +496,7 @@ export default function Home() {
               className="w-fit inline-flex items-center
     px-3 py-2
     leading-none
-    rounded-md bg-[#ffe193] text-[#001A3F]"
+    rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
               Batamia
             </a>
@@ -549,7 +549,7 @@ export default function Home() {
             className="w-70 h-auto pt-2 object-contain rounded-2xl"
           />
 
-          <div className="flex p-4 gap-4 items-center">
+          <div className="flex pt-6 pb-4 gap-4 items-center">
             <Image
               alt=""
               width={200}
@@ -563,7 +563,7 @@ export default function Home() {
               className="w-fit inline-flex items-center
     px-3 py-2
     leading-none
-    rounded-md bg-[#ffe193] text-[#001A3F]"
+    rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
               Infinity Beach Club
             </a>
@@ -611,7 +611,7 @@ export default function Home() {
             className="w-70 h-auto pt-2 rounded-2xl"
           />
 
-          <div className="flex pt-2 gap-4 items-center items-center">
+          <div className="flex pt-6 pb-4 gap-4 items-center">
             <Image
               alt=""
               width={200}
@@ -625,7 +625,7 @@ export default function Home() {
               className="w-fit inline-flex items-center
     px-3 py-2
     leading-none
-    rounded-md bg-[#ffe193] text-[#001A3F]"
+    rounded-md bg-[#ffe193] text-[#001A3F] text-sm"
             >
               Kelong Baba
             </a>
