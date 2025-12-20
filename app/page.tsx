@@ -242,7 +242,7 @@ export default function Home() {
               <p className="text-xs tracking-[0.05em] pt-4">
                 Dresscode : Free (Casual Attire)
               </p>
-              <p className="text-xs tracking-[0.05em]">17:30 - 19:30</p>
+              <p className="text-sm tracking-[0.05em]">17:30 - 19:30</p>
             </div>
           </div>
 
@@ -254,18 +254,21 @@ export default function Home() {
             className="w-80 h-auto pt-2 rounded-2xl"
           />
 
-          <div className="flex pt-2 gap-4">
+          <div className="flex pt-2 gap-4 items-center">
             <Image
               alt=""
               width={200}
               height={300}
               src="/logo/gmap.png"
-              className="w-5 h-auto object-contain"
+              className="w-3 h-auto object-contain"
             />
 
             <a
               href="https://maps.app.goo.gl/GjrX7cQdT4vKrBBo8"
-              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
+              className="w-fit inline-flex items-center
+    px-3 py-2
+    leading-none
+    rounded-md bg-[#ffe193] text-[#001A3F]"
             >
               Rumah Makan Jodoh
             </a>
@@ -307,13 +310,13 @@ export default function Home() {
             className="w-45 h-auto object-contain rounded-2xl"
           />
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 pt-2">
             <div className="flex flex-col items-center justify-center">
               <p className="text-xs tracking-[0.05em]">MEETING DAY 1</p>
               <p className="text-[10px] tracking-[0.05em]">
-                Tuesday, 13 Januari 2025
+                Tuesday, 13 Januari 2026
               </p>
-              <p className="text-[10px] tracking-[0.05em]">
+              <p className="text-xs tracking-[0.05em]">
                 at. Ranantira Ballroom
               </p>
               <p className="text-[10px] tracking-[0.05em]">08.00 - 16.30 WIB</p>
@@ -334,9 +337,9 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center">
               <p className="text-xs tracking-[0.05em]">MEETING DAY 2</p>
               <p className="text-[10px] tracking-[0.05em]">
-                Wednesday, 14 Januari 2025
+                Wednesday, 14 Januari 2026
               </p>
-              <p className="text-[10px] tracking-[0.05em]">
+              <p className="text-xs tracking-[0.05em]">
                 at. Ranantira Ballroom
               </p>
               <p className="text-[10px] tracking-[0.05em]">08.00 - 12.00 WIB</p>
@@ -355,18 +358,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex pt-2 gap-4">
+          <div className="flex pt-2 gap-4 items-center">
             <Image
               alt=""
               width={200}
               height={300}
               src="/logo/gmap.png"
-              className="w-5 h-auto object-contain"
+              className="w-3 h-auto object-contain"
             />
 
             <a
               href="https://maps.app.goo.gl/rVkoDKFcePvRdSVa8"
-              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
+              className="w-fit inline-flex items-center
+    px-3 py-2
+    leading-none
+    rounded-md bg-[#ffe193] text-[#001A3F]"
             >
               Grand Mercure
             </a>
@@ -397,13 +403,13 @@ export default function Home() {
             <div>
               <p className="text-sm tracking-[0.05em] pt-4">"AWARDING NIGHT"</p>
               <p className="text-sm tracking-[0.05em]">
-                Tuesday, 143Januari 26
+                Tuesday, 14Januari 2026
               </p>
               <p className="text-sm tracking-[0.05em]">at. Tembak Langit</p>
               <p className="text-xs tracking-[0.05em] pt-4">
                 Dresscode : Smart Casual (Bright Colour)
               </p>
-              <p className="text-xs tracking-[0.05em]">17:00 - 21:00</p>
+              <p className="text-sm tracking-[0.05em]">17:00 - 21:00</p>
             </div>
           </div>
 
@@ -415,18 +421,21 @@ export default function Home() {
             className="w-80 h-auto pt-2 rounded-2xl"
           />
 
-          <div className="flex pt-2 gap-4">
+          <div className="flex pt-2 gap-4 items-center">
             <Image
               alt=""
               width={200}
               height={300}
               src="/logo/gmap.png"
-              className="w-5 h-auto object-contain"
+              className="w-3 h-auto object-contain"
             />
 
             <a
               href="https://maps.app.goo.gl/39y1WWHk8w23mDmNA"
-              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
+              className="w-fit inline-flex items-center
+    px-3 py-2
+    leading-none
+    rounded-md bg-[#ffe193] text-[#001A3F]"
             >
               Tembak Langit
             </a>
@@ -459,9 +468,9 @@ export default function Home() {
                 “Shopping from Local Batam Souvenir Store”
               </p>
               <p className="text-sm tracking-[0.05em]">
-                Tuesday, 13 Januari 26 & Wednesday, 14 Januari 26
+                Tuesday, 13 Januari 2026 & Wednesday, 14 Januari 2026
               </p>
-              <p className="text-sm tracking-[0.05em]">at. Batamia Oleh-Oleh</p>
+              <p className="text-sm tracking-[0.05em] pt-2">at. Batamia Oleh-Oleh</p>
             </div>
           </div>
 
@@ -473,18 +482,21 @@ export default function Home() {
             className="w-70 h-auto pt-2 object-contain rounded-2xl"
           />
 
-          <div className="flex p-4 gap-4">
+          <div className="flex p-4 gap-4 items-center">
             <Image
               alt=""
               width={200}
               height={300}
               src="/logo/gmap.png"
-              className="w-5 h-auto object-contain"
+              className="w-3 h-auto object-contain"
             />
 
             <a
               href="https://maps.app.goo.gl/rFH9o9Mz7VHcqwh89"
-              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
+              className="w-fit inline-flex items-center
+    px-3 py-2
+    leading-none
+    rounded-md bg-[#ffe193] text-[#001A3F]"
             >
               Batamia
             </a>
@@ -509,7 +521,7 @@ export default function Home() {
             <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
-          <div className="w-[60%]">
+          <div className="w-[80%]">
             <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
@@ -517,7 +529,7 @@ export default function Home() {
                 "OUTDOOR ACTIVITY"
               </p>
               <p className="text-sm tracking-[0.05em]">
-                Wednesday, 14 Januari 26
+                Wednesday, 14 Januari 2026
               </p>
               <p className="text-sm tracking-[0.05em]">
                 at. INFINITY BEACH CLUB
@@ -525,7 +537,7 @@ export default function Home() {
               <p className="text-xs tracking-[0.05em] pt-2">
                 Dresscode : Free (Wet Ready)
               </p>
-              <p className="text-xs tracking-[0.05em]">15:00 - 16:30</p>
+              <p className="text-sm tracking-[0.05em]">15:00 - 16:30</p>
             </div>
           </div>
 
@@ -537,18 +549,21 @@ export default function Home() {
             className="w-70 h-auto pt-2 object-contain rounded-2xl"
           />
 
-          <div className="flex p-4 gap-4">
+          <div className="flex p-4 gap-4 items-center">
             <Image
               alt=""
               width={200}
               height={300}
               src="/logo/gmap.png"
-              className="w-5 h-auto object-contain"
+              className="w-3 h-auto object-contain"
             />
 
             <a
               href="https://maps.app.goo.gl/WJsieJTu47xuQYem7"
-              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
+              className="w-fit inline-flex items-center
+    px-3 py-2
+    leading-none
+    rounded-md bg-[#ffe193] text-[#001A3F]"
             >
               Infinity Beach Club
             </a>
@@ -579,7 +594,7 @@ export default function Home() {
             <div className=" pt-4">
               <p>"CLOSING DINNER"</p>
               <p className="text-sm tracking-[0.05em]">
-                Wednesday, 14 Januari 26
+                Wednesday, 14 Januari 2026
               </p>
               <p className="text-sm tracking-[0.05em]">
                 at. KELONG BABA SEAFOOD
@@ -596,18 +611,21 @@ export default function Home() {
             className="w-70 h-auto pt-2 rounded-2xl"
           />
 
-          <div className="flex pt-2 gap-4">
+          <div className="flex pt-2 gap-4 items-center items-center">
             <Image
               alt=""
               width={200}
               height={300}
               src="/logo/gmap.png"
-              className="w-5 h-auto object-contain"
+              className="w-3 h-auto object-contain"
             />
 
             <a
               href="https://maps.app.goo.gl/bX9d6U9bkrbjbCV6A"
-              className="w-80 p-2 rounded bg-[#ffe193] text-[#001A3F]"
+              className="w-fit inline-flex items-center
+    px-3 py-2
+    leading-none
+    rounded-md bg-[#ffe193] text-[#001A3F]"
             >
               Kelong Baba
             </a>
@@ -644,8 +662,23 @@ export default function Home() {
             }}
           >
             <option value="">Company</option>
+            <option value="PT. ASTRA OTOPARTS Tbk.">
+              PT. ASTRA OTOPARTS Tbk.
+            </option>
+            <option value="PT. ANAK MUDA RETAIL">PT. ANAK MUDA RETAIL</option>
+            <option value="PT. ANEKA GEMILANG">PT. ANEKA GEMILANG</option>
+            <option value="PT. ANEKA MEKAR">PT. ANEKA MEKAR</option>
             <option value="PT. ASPIRASI JAYA LESTARI">
               PT. ASPIRASI JAYA LESTARI
+            </option>
+            <option value="PT. BINTANG PUTRA AUTOPARTS">
+              PT. BINTANG PUTRA AUTOPARTS
+            </option>
+            <option value="PT. BORNEO MITRA MAKMUR">
+              PT. BORNEO MITRA MAKMUR
+            </option>
+            <option value="PT. BUDI PRATAMA SEJATI">
+              PT. BUDI PRATAMA SEJATI
             </option>
             <option value="PT. CALISPO CITRA LESTARI">
               PT. CALISPO CITRA LESTARI
@@ -659,28 +692,8 @@ export default function Home() {
             <option value="PT. CAPELLA PATRIA UTAMA">
               PT. CAPELLA PATRIA UTAMA
             </option>
-            <option value="CV. MAHKOTA ABADI JAYA">
-              CV. MAHKOTA ABADI JAYA
-            </option>
-            <option value="PT. MAKMUR AUTOPART INDONESIA">
-              PT. MAKMUR AUTOPART INDONESIA
-            </option>
-            <option value="CV. PRIMA MUSTIKA AGUNG">
-              CV. PRIMA MUSTIKA AGUNG
-            </option>
-            <option value="CV. SUMMA PUTRA HOKINDO">
-              CV. SUMMA PUTRA HOKINDO
-            </option>
-            <option value="PT. JAMBI MITRA SEJATI">
-              PT. JAMBI MITRA SEJATI
-            </option>
-            <option value="PT. ANEKA MEKAR">PT. ANEKA MEKAR</option>
-            <option value="PT. ANAK MUDA RETAIL">PT. ANAK MUDA RETAIL</option>
-            <option value="PT. BORNEO MITRA MAKMUR">
-              PT. BORNEO MITRA MAKMUR
-            </option>
-            <option value="PT. BINTANG PUTRA AUTOPARTS">
-              PT. BINTANG PUTRA AUTOPARTS
+            <option value="PT. CATUR PUTRA HARMONIS">
+              PT. CATUR PUTRA HARMONIS
             </option>
             <option value="PT. GUTRADO UTAMA TRADING">
               PT. GUTRADO UTAMA TRADING
@@ -688,43 +701,54 @@ export default function Home() {
             <option value="PT. HARAPAN JAYA SENTOSA ABADI">
               PT. HARAPAN JAYA SENTOSA ABADI
             </option>
+            <option value="PT. JAMBI MITRA SEJATI">
+              PT. JAMBI MITRA SEJATI
+            </option>
             <option value="PT. KUMALA CENTRAL PARTINDO">
               PT. KUMALA CENTRAL PARTINDO
             </option>
             <option value="PT. KUPANG JAYA AUTOPARTS">
               PT. KUPANG JAYA AUTOPARTS
             </option>
-            <option value="CV. KARYA KENCANA">CV. KARYA KENCANA</option>
-            <option value="CV. MITRA MAKMUR">CV. MITRA MAKMUR</option>
+            <option value="PT. MAKMUR AUTOPART INDONESIA">
+              PT. MAKMUR AUTOPART INDONESIA
+            </option>
             <option value="PT. MENTARI PRIMA SEMESTA KALBAR">
               PT. MENTARI PRIMA SEMESTA KALBAR
             </option>
-            <option value="PT. ANEKA GEMILANG">PT. ANEKA GEMILANG</option>
-            <option value="PT. BUDI PRATAMA SEJATI">
-              PT. BUDI PRATAMA SEJATI
+            <option value="PT. MITRA SEJATI PASSO">
+              PT. MITRA SEJATI PASSO
             </option>
-            <option value="PT. CATUR PUTRA HARMONIS">
-              PT. CATUR PUTRA HARMONIS
-            </option>
-            <option value="CV. FAJAR BARU ">CV. FAJAR BARU </option>
-            <option value="CV. INDOKITA MAKMUR">CV. INDOKITA MAKMUR</option>
-            <option value="CV. KANAKA JAYA">CV. KANAKA JAYA</option>
             <option value="PT. MUTIARA DENSO SEJATI">
               PT. MUTIARA DENSO SEJATI
             </option>
-            <option value="UD. MULTI JAYA BERSAMA">
-              UD. MULTI JAYA BERSAMA
+            <option value="PT. SALAWATI MITRA SEJATI PASSO">
+              PT. SALAWATI MITRA SEJATI PASSO
             </option>
-            <option value="SABARCO. TOKO">SABARCO. TOKO</option>
+            <option value="PT. SINERGI PARTSINDO JAYA">
+              PT. SINERGI PARTSINDO JAYA
+            </option>
             <option value="PT. STEVELINE JAYA PERKASA">
               PT. STEVELINE JAYA PERKASA
             </option>
             <option value="PT. TRI SAMUDRA">PT. TRI SAMUDRA</option>
-            <option value="PT. MITRA SEJATI PASSO">
-              PT. MITRA SEJATI PASSO
+            <option value="CV. FAJAR BARU ">CV. FAJAR BARU </option>
+            <option value="CV. INDOKITA MAKMUR">CV. INDOKITA MAKMUR</option>
+            <option value="CV. KANAKA JAYA">CV. KANAKA JAYA</option>
+            <option value="CV. KARYA KENCANA">CV. KARYA KENCANA</option>
+            <option value="CV. MAHKOTA ABADI JAYA">
+              CV. MAHKOTA ABADI JAYA
             </option>
-            <option value="PT. SALAWATI MITRA SEJATI PASSO">
-              PT. SALAWATI MITRA SEJATI PASSO
+            <option value="CV. MITRA MAKMUR">CV. MITRA MAKMUR</option>
+            <option value="CV. PRIMA MUSTIKA AGUNG">
+              CV. PRIMA MUSTIKA AGUNG
+            </option>
+            <option value="CV. SUMMA PUTRA HOKINDO">
+              CV. SUMMA PUTRA HOKINDO
+            </option>
+            <option value="SABARCO. TOKO">SABARCO. TOKO</option>
+            <option value="UD. MULTI JAYA BERSAMA">
+              UD. MULTI JAYA BERSAMA
             </option>
           </select>
           {errors.company && (
@@ -743,6 +767,36 @@ export default function Home() {
             }}
           >
             <option value="">Nama</option>
+            <option value="TUJUH MARTOGI SIAHAAN">TUJUH MARTOGI SIAHAAN</option>
+            <option value="INDRA NUGRAHA WISUDA">INDRA NUGRAHA WISUDA</option>
+            <option value="DENNY TEGUH SANTOSO">DENNY TEGUH SANTOSO</option>
+            <option value="RONNY CHANDRA">RONNY CHANDRA</option>
+            <option value="BETY ROSMALA">BETY ROSMALA</option>
+            <option value="INGRID ISKANDAR">INGRID ISKANDAR</option>
+            <option value="TRI PANCA AGUNG">TRI PANCA AGUNG</option>
+            <option value="WILLIAM ANDREW">WILLIAM ANDREW</option>
+            <option value="BIMA ARYO WICAKSONO">BIMA ARYO WICAKSONO</option>
+            <option value="ERIC TUNGGADJAJA">ERIC TUNGGADJAJA</option>
+            <option value="ANDREAS SOMAWIDJAJA">ANDREAS SOMAWIDJAJA</option>
+            <option value="EDWIN SURJADIPRADJA">EDWIN SURJADIPRADJA</option>
+            <option value="YANDI HERMANTO">YANDI HERMANTO</option>
+            <option value="AHMAD FARIS ASSEGAF">AHMAD FARIS ASSEGAF</option>
+            <option value="WENDY DESTYANTO">WENDY DESTYANTO</option>
+            <option value="NUGROHO ARIEF">NUGROHO ARIEF</option>
+            <option value="CALVIN GOZAL">CALVIN GOZAL</option>
+            <option value="MONICA FELLIANA TJUTJU">
+              MONICA FELLIANA TJUTJU
+            </option>
+            <option value="MERCYA ZETTIRA AGUSTINE">
+              MERCYA ZETTIRA AGUSTINE
+            </option>
+            <option value="HENGKY RUDYANTO">HENGKY RUDYANTO</option>
+            <option value="CAHAYA FREDI">CAHAYA FREDI</option>
+            <option value="JONI INDRA">JONI INDRA</option>
+            <option value="FILIP GUNAWAN">FILIP GUNAWAN</option>
+            <option value="FRANSEDA NAINGGOLAN">FRANSEDA NAINGGOLAN</option>
+            <option value="ERWAN SUMARSONO">ERWAN SUMARSONO</option>
+            <option value="SONYA GIOVANNI">SONYA GIOVANNI</option>
             <option value="IRWAN KOHAR">IRWAN KOHAR</option>
             <option value="ANDI GUNAWAN">ANDI GUNAWAN</option>
             <option value="SALIPIN SURYO">SALIPIN SURYO</option>
@@ -804,6 +858,49 @@ export default function Home() {
             </option>
             <option value="JOHAN SETIAWAN">JOHAN SETIAWAN</option>
             <option value="EDWIN THUNGGAWAN">EDWIN THUNGGAWAN</option>
+            <option value="ANDREANUS WAHYUDI">ANDREANUS WAHYUDI</option>
+            <option value="MADELINE AUDORA">MADELINE AUDORA</option>
+            <option value="ANDRONICUS">ANDRONICUS</option>
+            <option value="UDOWO RAKSOYUDO">UDOWO RAKSOYUDO</option>
+            <option value="RYAN">RYAN</option>
+            <option value="HENDRAWAN WIJAYA">HENDRAWAN WIJAYA</option>
+            <option value="JODI PANGESTU">JODI PANGESTU</option>
+            <option value="CORNELIA">CORNELIA</option>
+            <option value="MARIO TUMPAK">MARIO TUMPAK</option>
+            <option value="RUDI YANTHO">RUDI YANTHO</option>
+            <option value="ADRIAN STEFANUS">ADRIAN STEFANUS</option>
+            <option value="YOHANES ADRI PRATAMA">YOHANES ADRI PRATAMA</option>
+            <option value="FX SONY WIDJAJA">FX SONY WIDJAJA</option>
+            <option value="DENNIS DESTIAN">DENNIS DESTIAN</option>
+            <option value="PUJI NURYADIN">PUJI NURYADIN</option>
+            <option value="ANGGA BACHTIAR">ANGGA BACHTIAR</option>
+            <option value="REVEL CHRISTIAN WAROH SANTOSO">
+              REVEL CHRISTIAN WAROH SANTOSO
+            </option>
+            <option value="WILLY CHRIST">WILLY CHRIST</option>
+            <option value="DIONYSIUS ANDRE SUHARTO">
+              DIONYSIUS ANDRE SUHARTO
+            </option>
+            <option value="ALEX SUTEDJA">ALEX SUTEDJA</option>
+            <option value="MUHAMMAD IQBAL FARABI">MUHAMMAD IQBAL FARABI</option>
+            <option value="DESO ARIS PRASETYO">DESO ARIS PRASETYO</option>
+            <option value="DEDDY SANJAYA KRISTIAN">
+              DEDDY SANJAYA KRISTIAN
+            </option>
+            <option value="LEONARDO CAESAR HARYONO">
+              LEONARDO CAESAR HARYONO
+            </option>
+            <option value="JASIR MANARANG">JASIR MANARANG</option>
+            <option value="CORNELIUS CHRISTOPHER ERIANTO">
+              CORNELIUS CHRISTOPHER ERIANTO
+            </option>
+            <option value="IRFANDY APRILIANO">IRFANDY APRILIANO</option>
+            <option value="LIE SUI KET">LIE SUI KET</option>
+            <option value="JAFFET TIMOTHY GANIWIDJAJA">
+              JAFFET TIMOTHY GANIWIDJAJA
+            </option>
+            <option value="DAVID">DAVID</option>
+            <option value="VALERINO">VALERINO</option>
           </select>
           {errors.name && (
             <p className="text-red-500 text-xs tracking-[0.05em]">

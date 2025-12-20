@@ -9,7 +9,7 @@ const Footer = () => {
           width={200}
           height={300}
           src="/logo/astraNSM.png"
-          className="w-20 h-auto object-contain"
+          className="w-12 h-auto object-contain"
         />
 
         <div className="h-8 w-[2px] bg-gray-300" />
