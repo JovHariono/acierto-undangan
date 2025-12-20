@@ -146,12 +146,17 @@ export default function Home() {
             <div>BATAM - GRAND MERCURE</div>
             <div>12 - 15 Januari 2026</div>
 
-            <div className="font-bold text-xs tracking-wide pt-4 mt-8" style={{ color: "#ffe193" }}>
+            <div
+              className="font-bold text-xs tracking-wide pt-4 mt-8"
+              style={{ color: "#ffe193" }}
+            >
               {String(timeLeft.days).padStart(2, "0")} HARI ;{" "}
               {String(timeLeft.hours).padStart(2, "0")} JAM ;{" "}
               {String(timeLeft.minutes).padStart(2, "0")} MENIT
             </div>
-            <div className="text-xs" style={{ color: "#ffe193" }}>Menuju NSM 2026</div>
+            <div className="text-xs" style={{ color: "#ffe193" }}>
+              Menuju NSM 2026
+            </div>
           </div>
         </div>
       </div>
@@ -218,24 +223,26 @@ export default function Home() {
       >
         <Header />
         <div
-          className="flex flex-col text-center items-center gap-4"
+          className="flex flex-col text-center items-center gap-2"
           style={{ color: "#ffe193" }}
         >
           <div className="" style={gradientStyle}>
-            <h1 className="text-xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-xl text-center"> MEETING</h1>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[80%] pt-2">
             <h1 className="text-center tracking-[0.05em]">AGENDA DAY 1</h1>
 
             <div>
-              <p className="text-xs tracking-[0.05em]">WELCOMING DINNER</p>
-              <p className="text-xs tracking-[0.05em]">12 Januari 26</p>
-              <p className="text-xs tracking-[0.05em]">at. RUMAH MAKAN JODOH</p>
-              <p className="text-xs tracking-[0.05em]">Dresscode : </p>
-              <p className="text-xs tracking-[0.05em]">Bebas - Rapih</p>
-              <p className="text-xs tracking-[0.05em]">18:00 - 21:00</p>
+              <p className="text-sm tracking-[0.05em] pt-4">
+                "WELCOMING DINNER"
+              </p>
+              <p className="text-sm tracking-[0.05em]">Monday, 12 Januari 26</p>
+              <p className="text-sm tracking-[0.05em]">at. RUMAH MAKAN JODOH</p>
+              <p className="text-xs tracking-[0.05em] pt-4">
+                Dresscode : Free (Casual Attire)
+              </p>
+              <p className="text-xs tracking-[0.05em]">17:30 - 19:30</p>
             </div>
           </div>
 
@@ -276,12 +283,11 @@ export default function Home() {
       >
         <Header />
         <div
-          className="flex flex-col text-center items-center gap-4 md:gap-0"
+          className="flex flex-col text-center items-center gap-2 md:gap-0"
           style={{ color: "#ffe193" }}
         >
-          <div className="pt-4" style={gradientStyle}>
-            <h1 className="text-xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-xl text-center"> MEETING</h1>
+          <div className="" style={gradientStyle}>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[80%]">
@@ -289,16 +295,7 @@ export default function Home() {
 
             <div>
               <p className="text-xs tracking-[0.05em]">MEETING DAY</p>
-              <p className="text-xs tracking-[0.05em]">13 Januari 26 & 14 Januari 26</p>
               <p className="text-xs tracking-[0.05em]">at. GRAND MERCURE</p>
-              <p className="text-xs tracking-[0.05em]">Dresscode Day 1 : </p>
-              <p className="text-xs tracking-[0.05em]">Kemeja Putih - Jeans</p>
-            </div>
-
-            <div className="pt-2">
-              <p className="text-xs tracking-[0.05em]">Dresscode Day 2 : </p>
-              <p className="text-xs tracking-[0.05em]">Kemeja Hitam - Jeans</p>
-              <p className="text-xs tracking-[0.05em]">09:00 - 17:00</p>
             </div>
           </div>
 
@@ -307,8 +304,56 @@ export default function Home() {
             width={200}
             height={300}
             src="/loc/grandMercure.jpg"
-            className="w-60 h-auto object-contain md: pt-2 rounded-2xl"
+            className="w-45 h-auto object-contain rounded-2xl"
           />
+
+          <div className="flex gap-4">
+            <div className="flex flex-col items-center justify-center">
+              <p className="text-xs tracking-[0.05em]">MEETING DAY 1</p>
+              <p className="text-[10px] tracking-[0.05em]">
+                Tuesday, 13 Januari 2025
+              </p>
+              <p className="text-[10px] tracking-[0.05em]">
+                at. Ranantira Ballroom
+              </p>
+              <p className="text-[10px] tracking-[0.05em]">08.00 - 16.30 WIB</p>
+
+              <p className="text-[10px] tracking-[0.05em]">
+                Dresscode : Kemeja Putih - Jeans
+              </p>
+
+              <Image
+                alt=""
+                width={200}
+                height={300}
+                src="/loc/putih.png"
+                className="w-30 h-auto object-contain md: pt-2"
+              />
+            </div>
+
+            <div className="flex flex-col items-center justify-center">
+              <p className="text-xs tracking-[0.05em]">MEETING DAY 2</p>
+              <p className="text-[10px] tracking-[0.05em]">
+                Wednesday, 14 Januari 2025
+              </p>
+              <p className="text-[10px] tracking-[0.05em]">
+                at. Ranantira Ballroom
+              </p>
+              <p className="text-[10px] tracking-[0.05em]">08.00 - 12.00 WIB</p>
+
+              <p className="text-[10px] tracking-[0.05em]">
+                Dresscode : Kemeja Hitam - Jeans
+              </p>
+
+              <Image
+                alt=""
+                width={200}
+                height={300}
+                src="/loc/item.png"
+                className="w-30 h-34 object-contain md: pt-2"
+              />
+            </div>
+          </div>
 
           <div className="flex pt-2 gap-4">
             <Image
@@ -342,20 +387,22 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4"
           style={{ color: "#ffe193" }}
         >
-          <div className="pt-4" style={gradientStyle}>
-            <h1 className="text-xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-xl text-center"> MEETING</h1>
+          <div className="" style={gradientStyle}>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
-          <div className="w-[80%]">
+          <div className="w-full">
             <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
-              <p className="text-xs tracking-[0.05em]">AWARDING NIGHT</p>
-              <p className="text-xs tracking-[0.05em]">14 Januari 26</p>
-              <p className="text-xs tracking-[0.05em]">at. Tembak Langit</p>
-              <p className="text-xs tracking-[0.05em]">Dresscode : </p>
-              <p className="text-xs tracking-[0.05em]">Smart Casual (Warna Terang)</p>
+              <p className="text-sm tracking-[0.05em] pt-4">"AWARDING NIGHT"</p>
+              <p className="text-sm tracking-[0.05em]">
+                Tuesday, 143Januari 26
+              </p>
+              <p className="text-sm tracking-[0.05em]">at. Tembak Langit</p>
+              <p className="text-xs tracking-[0.05em] pt-4">
+                Dresscode : Smart Casual (Bright Colour)
+              </p>
               <p className="text-xs tracking-[0.05em]">17:00 - 21:00</p>
             </div>
           </div>
@@ -400,18 +447,21 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4"
           style={{ color: "#ffe193" }}
         >
-          <div className="pt-4" style={gradientStyle}>
-            <h1 className="text-xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-xl text-center"> MEETING</h1>
+          <div className="" style={gradientStyle}>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%]">
             <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
-              <p className="text-xs tracking-[0.05em]">BELANJA OLEH-OLEH</p>
-              <p className="text-xs tracking-[0.05em]">13 Januari 26 & 14 Januari 26</p>
-              <p className="text-xs tracking-[0.05em]">at. Batamia Oleh-Oleh</p>
+              <p className="text-sm tracking-[0.05em] pt-4">
+                “Shopping from Local Batam Souvenir Store”
+              </p>
+              <p className="text-sm tracking-[0.05em]">
+                Tuesday, 13 Januari 26 & Wednesday, 14 Januari 26
+              </p>
+              <p className="text-sm tracking-[0.05em]">at. Batamia Oleh-Oleh</p>
             </div>
           </div>
 
@@ -455,20 +505,26 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4"
           style={{ color: "#ffe193" }}
         >
-          <div className="pt-4" style={gradientStyle}>
-            <h1 className="text-xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-xl text-center"> MEETING</h1>
+          <div className="" style={gradientStyle}>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[60%]">
             <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
             <div>
-              <p className="text-xs tracking-[0.05em]">OUTDOOR ACTIVITY</p>
-              <p className="text-xs tracking-[0.05em]">14 Januari 26</p>
-              <p className="text-xs tracking-[0.05em]">at. INFINITY BEACH CLUB</p>
-              <p className="text-xs tracking-[0.05em]">Dresscode : </p>
-              <p className="text-xs tracking-[0.05em]">Kaos</p>
+              <p className="text-sm tracking-[0.05em] pt-4">
+                "OUTDOOR ACTIVITY"
+              </p>
+              <p className="text-sm tracking-[0.05em]">
+                Wednesday, 14 Januari 26
+              </p>
+              <p className="text-sm tracking-[0.05em]">
+                at. INFINITY BEACH CLUB
+              </p>
+              <p className="text-xs tracking-[0.05em] pt-2">
+                Dresscode : Free (Wet Ready)
+              </p>
               <p className="text-xs tracking-[0.05em]">15:00 - 16:30</p>
             </div>
           </div>
@@ -513,19 +569,22 @@ export default function Home() {
           className="flex flex-col text-center items-center gap-4"
           style={{ color: "#ffe193" }}
         >
-          <div className="pt-4" style={gradientStyle}>
-            <h1 className="text-xl text-center">NATIONAL SALES</h1>
-            <h1 className="text-xl text-center"> MEETING</h1>
+          <div className="" style={gradientStyle}>
+            <h1 className="text-xl text-center">NATIONAL SALES MEETING</h1>
           </div>
 
           <div className="w-[80%]">
             <h1 className="text-center tracking-[0.05em]">AGENDA</h1>
 
-            <div>
-              <p>CLOSING DINNER</p>
-              <p className="text-xs tracking-[0.05em]">14 Januari 26</p>
-              <p className="text-xs tracking-[0.05em]">at. KELONG BABA SEAFOOD</p>
-              <p className="text-xs tracking-[0.05em]">18:00 - 21:00</p>
+            <div className=" pt-4">
+              <p>"CLOSING DINNER"</p>
+              <p className="text-sm tracking-[0.05em]">
+                Wednesday, 14 Januari 26
+              </p>
+              <p className="text-sm tracking-[0.05em]">
+                at. KELONG BABA SEAFOOD
+              </p>
+              <p className="text-sm tracking-[0.05em]">18:00 - 21:00</p>
             </div>
           </div>
 
@@ -576,8 +635,9 @@ export default function Home() {
 
         <div className="flex flex-col gap-4 w-64">
           <select
-            className={`bg-[#ffe193] p-2 rounded ${errors.company ? "border border-red-600" : ""
-              }`}
+            className={`bg-[#ffe193] p-2 rounded ${
+              errors.company ? "border border-red-600" : ""
+            }`}
             onChange={(e) => {
               setForm({ ...form, company: e.target.value });
               setErrors({ ...errors, company: undefined });
@@ -668,12 +728,15 @@ export default function Home() {
             </option>
           </select>
           {errors.company && (
-            <p className="text-red-500 text-xs tracking-[0.05em]">{errors.company}</p>
+            <p className="text-red-500 text-xs tracking-[0.05em]">
+              {errors.company}
+            </p>
           )}
 
           <select
-            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${errors.name ? "border border-red-600" : ""
-              }`}
+            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${
+              errors.name ? "border border-red-600" : ""
+            }`}
             onChange={(e) => {
               setForm({ ...form, name: e.target.value });
               setErrors({ ...errors, name: undefined });
@@ -742,11 +805,16 @@ export default function Home() {
             <option value="JOHAN SETIAWAN">JOHAN SETIAWAN</option>
             <option value="EDWIN THUNGGAWAN">EDWIN THUNGGAWAN</option>
           </select>
-          {errors.name && <p className="text-red-500 text-xs tracking-[0.05em]">{errors.name}</p>}
+          {errors.name && (
+            <p className="text-red-500 text-xs tracking-[0.05em]">
+              {errors.name}
+            </p>
+          )}
 
           <select
-            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${errors.kehadiran ? "border border-red-600" : ""
-              }`}
+            className={`bg-[#ffe193] p-2 rounded focus:outline-none ${
+              errors.kehadiran ? "border border-red-600" : ""
+            }`}
             onChange={(e) => {
               const value =
                 e.target.value === "" ? null : Number(e.target.value);
@@ -759,12 +827,15 @@ export default function Home() {
             <option value="0">Tidak Hadir</option>
           </select>
           {errors.kehadiran && (
-            <p className="text-red-500 text-xs tracking-[0.05em]">{errors.kehadiran}</p>
+            <p className="text-red-500 text-xs tracking-[0.05em]">
+              {errors.kehadiran}
+            </p>
           )}
 
           <label
-            className={`flex flex-col rounded p-3 cursor-pointer bg-[#ffe193] ${errors.tiket ? "border border-red-600" : "border"
-              }`}
+            className={`flex flex-col rounded p-3 cursor-pointer bg-[#ffe193] ${
+              errors.tiket ? "border border-red-600" : "border"
+            }`}
           >
             <span className="text-sm">Tiket</span>
             <span className="text-[8px] p-0.5">Max file upload 5Mb</span>
@@ -784,7 +855,9 @@ export default function Home() {
             </div>
           </label>
           {errors.tiket && (
-            <p className="text-red-500 text-xs tracking-[0.05em]">{errors.tiket}</p>
+            <p className="text-red-500 text-xs tracking-[0.05em]">
+              {errors.tiket}
+            </p>
           )}
 
           <button
