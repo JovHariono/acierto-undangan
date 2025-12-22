@@ -242,7 +242,7 @@ export default function Home() {
               <p className="text-xs tracking-[0.05em] pt-4">
                 Dresscode : Free (Casual Attire)
               </p>
-              <p className="text-sm tracking-[0.05em]">17:30 - 19:30</p>
+              <p className="text-sm tracking-[0.05em]">17:30 - 19:30 WIB</p>
             </div>
           </div>
 
@@ -409,7 +409,7 @@ export default function Home() {
               <p className="text-xs tracking-[0.05em] pt-4">
                 Dresscode : Smart Casual (Bright Colour)
               </p>
-              <p className="text-sm tracking-[0.05em]">17:00 - 21:00</p>
+              <p className="text-sm tracking-[0.05em]">17:00 - 21:00 WIB</p>
             </div>
           </div>
 
@@ -537,7 +537,7 @@ export default function Home() {
               <p className="text-xs tracking-[0.05em] pt-2">
                 Dresscode : Free (Wet Ready)
               </p>
-              <p className="text-sm tracking-[0.05em]">15:00 - 16:30</p>
+              <p className="text-sm tracking-[0.05em]">15:00 - 16:30 WIB</p>
             </div>
           </div>
 
@@ -599,7 +599,7 @@ export default function Home() {
               <p className="text-sm tracking-[0.05em]">
                 at. KELONG BABA SEAFOOD
               </p>
-              <p className="text-sm tracking-[0.05em]">18:00 - 21:00</p>
+              <p className="text-sm tracking-[0.05em]">18:00 - 21:00 WIB</p>
             </div>
           </div>
 
