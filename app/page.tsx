@@ -403,7 +403,7 @@ export default function Home() {
             <div>
               <p className="text-sm tracking-[0.05em] pt-4">"AWARDING NIGHT"</p>
               <p className="text-sm tracking-[0.05em]">
-                Tuesday, 14 January 2026
+                Tuesday, 13 January 2026
               </p>
               <p className="text-sm tracking-[0.05em]">at. Tembak Langit</p>
               <p className="text-xs tracking-[0.05em] pt-4">
